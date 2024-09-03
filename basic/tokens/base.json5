@@ -1,39 +1,30 @@
 {
   "base": {
     "$type": "base",
-    "black": {
-      "$value": "#000000"
-    },
-    "white": {
-      "$value": "#ffffff"
-    },
-    "orange": {
+    "red": {
       "100": {
-        "$value": "#fffaf0"
+        "$value": "#fff5f5" // 100
       },
       "200": {
-        "$value": "#feebc8"
+        "$value": "#fed7d7"
       },
       "300": {
-        "$value": "#fbd38d"
+        "$value": "#feb2b2"
       },
       "400": {
-        "$value": "#f6ad55"
+        "$value": "#fc8181"
       },
       "500": {
-        "$value": "#ed8936"
+        "$value": "#f56565"
       },
       "600": {
-        "$value": "#dd6b20"
+        "$value": "#e53e3e"
       },
       "700": {
-        "$value": "#c05621"
+        "$value": "#c53030"
       },
       "800": {
-        "$value": "#9c4221"
-      },
-      "900": {
-        "$value": "#7b341e"
+        "$value": "#9b2c2c" 
       }
     }
   }
