@@ -3,6 +3,17 @@
  */
 
 :root {
+  --base-black: #000000;
+  --base-white: #ffffff;
+  --base-orange-100: #fffaf0;
+  --base-orange-200: #feebc8;
+  --base-orange-300: #fbd38d;
+  --base-orange-400: #f6ad55;
+  --base-orange-500: #ed8936;
+  --base-orange-600: #dd6b20;
+  --base-orange-700: #c05621;
+  --base-orange-800: #9c4221;
+  --base-orange-900: #7b341e;
   --colors-black: #000000;
   --colors-white: #ffffff;
   --colors-orange-100: #fffaf0;
