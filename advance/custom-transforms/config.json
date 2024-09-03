@@ -16,7 +16,7 @@
           "filter":  "fontSize-only"
         },
         {
-          "destination": "dimension-tokens.css",
+          "destination": "_dimension-tokens.css",
           "format": "css/variables",
           "filter":  "dimension-only"
         }
