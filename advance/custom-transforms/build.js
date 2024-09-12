@@ -18,7 +18,11 @@ StyleDictionary.registerTransform({
 
 StyleDictionary.registerFilter({
   name: "colors-only",
-  filter: (token) => token.type === "color",
+  type: "value",
+  filter: (token) => { 
+    console.log(token.type);
+    return token.$type === "color"
+  },
 });
 StyleDictionary.registerFilter({
   name: "fontSize-only",

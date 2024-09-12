@@ -1,64 +1,59 @@
 {
-  "source": ["tokens/**/*.@(json|json5)"],
+  "source": ["tokens/**/*.json"],
   "platforms": {
     "css": {
       "transformGroup": "css",
       "buildPath": "build/css/",
       "files": [
         {
-          "destination": "_base.css",
-          "format": "css/variables",
-          "filter": "base"
-        },
-        {
           "destination": "_color.css",
           "format": "css/variables",
-          "filter": "color"
+          "filter": { "$type": "color" }
         },
         {
           "destination": "_dimension.css",
           "format": "css/variables",
-          "filter": "dimension"
+          "filter": { "$type": "dimension" }
         },
         {
           "destination": "_typography.css",
           "format": "css/variables",
-          "filter": "typography"
+          "filter": { "$type": "typography" }
         },
         {
           "destination": "_transition.css",
           "format": "css/variables",
-          "filter": "transition"
+          "filter": { "$type": "transition" }
         },
         {
           "destination": "_border.css",
           "format": "css/variables",
-          "filter": "border"
+          "filter": { "$type": "border" }
         },
         {
           "destination": "_shadow.css",
           "format": "css/variables",
-          "filter": "shadow"
+          "filter": { "$type": "shadow" }
         },
         {
           "destination": "_fontFamily.css",
           "format": "css/variables",
-          "filter": "fontFamily"
+          "filter": { "$type": "fontFamily" }
         },
         {
           "destination": "_fontSize.css",
           "format": "css/variables",
-          "filter": "fontSize"
+          "filter": { "$type": "fontSize" }
         },
         {
           "destination": "_fontWeight.css",
           "format": "css/variables",
-          "filter": "fontWeight"
+          "filter": { "$type": "fontWeight" }
         },
         {
           "destination": "_number.css",
           "format": "css/variables",
-          "filter": "number"
+          "filter": { "$type": "number" }
         }
       ]
     }
