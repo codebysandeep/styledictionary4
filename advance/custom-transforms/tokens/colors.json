@@ -1,8 +1,8 @@
 {
   "color": {
-    "$type": "color",
-    "greenn": {
-        "$value": "#00FF00"
+    "green": {
+        "value": "#00FF00",
+        "type": "color"
       }
   }
 }

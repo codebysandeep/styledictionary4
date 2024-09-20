@@ -19,9 +19,9 @@ StyleDictionary.registerTransform({
 StyleDictionary.registerFilter({
   name: "colors-only",
   type: "value",
-  filter: (token) => { 
-    console.log(token.type);
-    return token.$type === "color"
+  filter: (token) => {
+    console.log(`token: ${token.name}, type: ${token.type}`);
+    return token.type === "color";
   },
 });
 StyleDictionary.registerFilter({
@@ -35,12 +35,12 @@ StyleDictionary.registerFilter({
 
 StyleDictionary.registerTransformGroup({
   name: "custom/web",
-  transforms: ["attribute/cti", "name/camel", "color/rgb", "size/px"],
+  transforms: ["attribute/cti", "name/camel", "color/rgba", "size/px"],
 });
 
 StyleDictionary.registerTransformGroup({
   name: "custom/css",
-  transforms: ["attribute/cti", "name/kebab", "color/hex", "size/rem"],
+  transforms: ["color/rgb"],
 });
 
 StyleDictionary.registerTransformGroup({

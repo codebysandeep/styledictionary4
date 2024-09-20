@@ -7,7 +7,7 @@
       },
       "radius": {
         "value": "0.01",
-        "type": "ratio"
+        "type": "dimension"
       }
     }
   }

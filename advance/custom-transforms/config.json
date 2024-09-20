@@ -2,56 +2,14 @@
   "source": ["tokens/**/*.json"],
   "platforms": {
     "css": {
-      "transformGroup": "custom/css",
+      "transformGroup": "css",
       "buildPath": "build/css/",
       "files": [
         {
           "destination": "_color-tokens.css",
-          "format": "css/variables",
-          "filter":  "color"
-        },
-        {
-          "destination": "_font-tokens.css",
-          "format": "css/variables",
-          "filter":  "fontSize-only"
-        },
-        {
-          "destination": "_dimension-tokens.css",
-          "format": "css/variables",
-          "filter":  "dimension-only"
+          "format": "css/variables"
         }
       ]
-    },
-    "web": {
-      "transformGroup": "custom/web",
-      "buildPath": "build/web/",
-      "files": [
-        {
-          "destination": "tokens.js",
-          "format": "javascript/es6"
-        }
-      ]
-    },
-    "scss": {
-      "transformGroup": "custom/scss",
-      "buildPath": "build/scss/",
-      "files": [
-        {
-          "destination": "_color-tokens.scss",
-          "format": "scss/variables",
-          "filter":  "color"
-        },
-        {
-          "destination": "_font-tokens.scss",
-          "format": "scss/variables",
-          "filter":  "fontSize-only"
-        },
-        {
-          "destination": "dimension-tokens.scss",
-          "format": "scss/variables",
-          "filter":  "dimension-only"
-        }
-    ]
     }
   }
 }
