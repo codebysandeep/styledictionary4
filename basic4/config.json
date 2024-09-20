@@ -2,12 +2,12 @@
   "source": ["tokens/**/*.@(json|json5)"],
   "platforms": {
 
-    "web": {
+    "allTokens": {
       "transformGroup": "web-group",
       "buildPath": "build/web/js/",
       "files": [
         {
-          "destination": "tokensAll.js",
+          "destination": "_allTokens.js",
           "format": "javascript/es6"
         },
         {
@@ -59,6 +59,81 @@
           "destination": "_number.js",
           "format": "javascript/es6",
           "filter": { "$type": "number" }
+        }
+      ]
+    },
+
+    "allTokensColorRGB": {
+      "transformGroup": "web-group",
+      "transforms": "color/rgb",
+      "buildPath": "build/web/js/",
+      "files": [
+        {
+          "destination": "_allTokensColorRGB.js",
+          "format": "javascript/es6"
+        }
+      ]
+    },
+
+    "allTokensColorHSL": {
+      "transformGroup": "web-group",
+      "transforms": "color/hsl",
+      "buildPath": "build/web/js/",
+      "files": [
+        {
+          "destination": "_allTokensColorHSL.js",
+          "format": "javascript/es6"
+        }
+      ]
+    },
+
+    "allTokensColorHEX": {
+      "transformGroup": "web-group",
+      "transforms": "color/hex",
+      "buildPath": "build/web/js/",
+      "files": [
+        {
+          "destination": "_allTokensColorHEX.js",
+          "format": "javascript/es6"
+        }
+      ]
+    },
+
+    "webColorRGB": {
+      "transformGroup": "web-group",
+      "transforms": "color/rgb",
+      "buildPath": "build/web/js/",
+      "files": [
+        {
+          "destination": "_colorRGB.js",
+          "format": "javascript/es6",
+          "filter": { "$type": "color" }
+        }
+      ]
+    },
+
+    "webColorHSL": {
+      "transformGroup": "web-group",
+      "transforms": "color/hsl",
+      "buildPath": "build/web/js/",
+      "files": [
+        {
+          "destination": "_colorHSL.js",
+          "format": "javascript/es6",
+          "filter": { "$type": "color" }
+        }
+      ]
+    },
+
+    "webColorHEX": {
+      "transformGroup": "web-group",
+      "transforms": "color/hex",
+      "buildPath": "build/web/js/",
+      "files": [
+        {
+          "destination": "_colorHEX.js",
+          "format": "javascript/es6",
+          "filter": { "$type": "color" }
         }
       ]
     },
