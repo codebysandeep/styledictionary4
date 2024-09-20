@@ -1,15 +1,77 @@
 {
   "source": ["tokens/**/*.@(json|json5)"],
   "platforms": {
+
+    "web": {
+      "transformGroup": "web-group",
+      "buildPath": "build/web/js/",
+      "files": [
+        {
+          "destination": "tokensAll.js",
+          "format": "javascript/es6"
+        },
+        {
+          "destination": "_color.js",
+          "format": "javascript/es6",
+          "filter": { "$type": "color" }
+        },
+        {
+          "destination": "_dimension.js",
+          "format": "javascript/es6",
+          "filter": { "$type": "dimension" }
+        },
+        {
+          "destination": "_typography.js",
+          "format": "javascript/es6",
+          "filter": { "$type": "typography" }
+        },
+        {
+          "destination": "_transition.js",
+          "format": "javascript/es6",
+          "filter": { "$type": "transition" }
+        },
+        {
+          "destination": "_border.js",
+          "format": "javascript/es6",
+          "filter": { "$type": "border" }
+        },
+        {
+          "destination": "_shadow.js",
+          "format": "javascript/es6",
+          "filter": { "$type": "shadow" }
+        },
+        {
+          "destination": "_fontFamily.js",
+          "format": "javascript/es6",
+          "filter": { "$type": "fontFamily" }
+        },
+        {
+          "destination": "_fontSize.js",
+          "format": "javascript/es6",
+          "filter": { "$type": "fontSize" }
+        },
+        {
+          "destination": "_fontWeight.js",
+          "format": "javascript/es6",
+          "filter": { "$type": "fontWeight" }
+        },
+        {
+          "destination": "_number.js",
+          "format": "javascript/es6",
+          "filter": { "$type": "number" }
+        }
+      ]
+    },
+
     "css": {
-      "transformGroup": "css",
+      "transformGroup": "css-group",
       "buildPath": "build/css/",
       "files": [
         {
           "destination": "_base.css",
           "format": "css/variables",
           "filter": {
-            "$type": "base"
+            "$type": "color"
           }
         },
         {
@@ -21,5 +83,6 @@
         }
       ]
     }
+    
   }
 }

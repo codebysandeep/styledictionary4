@@ -1,6 +1,6 @@
 {
   "base": {
-    "$type": "base",
+    "$type": "color",
     "red": {
       "100": {
         "$value": "#fff5f5" // 100
