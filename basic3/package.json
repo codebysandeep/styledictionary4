@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "style-dictionary build --config ./build.js",
-    "clean": "rm -rf build",
+    "clean": "rimraf build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
