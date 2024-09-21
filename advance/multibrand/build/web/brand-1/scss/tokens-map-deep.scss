@@ -1,0 +1,166 @@
+
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+$base-red-100: #fff5f5 !default;
+$base-red-200: #fed7d7 !default;
+$base-red-300: #feb2b2 !default;
+$base-red-400: #fc8181 !default;
+$base-red-500: #f56565 !default;
+$base-red-600: #e53e3e !default;
+$base-red-700: #c53030 !default;
+$base-red-800: #9b2c2c !default;
+$colors-black: #000000 !default;
+$colors-white: #ffffff !default;
+$colors-orange-100: #fffaf0 !default;
+$colors-orange-200: #feebc8 !default;
+$colors-orange-300: #fbd38d !default;
+$colors-orange-400: #f6ad55 !default;
+$colors-orange-500: #ed8936 !default;
+$colors-orange-600: #dd6b20 !default;
+$colors-orange-700: #c05621 !default;
+$colors-orange-800: #9c4221 !default;
+$colors-orange-900: #7b341e !default;
+$dimensions-0: 0px !default;
+$dimensions-1: 4px !default;
+$dimensions-2: 8px !default;
+$dimensions-3: 12px !default;
+$dimensions-4: 16px !default;
+$dimensions-5: 20px !default;
+$dimensions-6: 24px !default;
+$dimensions-7: 28px !default;
+$dimensions-8: 32px !default;
+$dimensions-9: 36px !default;
+$dimensions-10: 40px !default;
+$dimensions-11: 44px !default;
+$dimensions-12: 48px !default;
+$dimensions-13: 52px !default;
+$dimensions-14: 56px !default;
+$dimensions-15: 60px !default;
+$dimensions-max: 9999px !default;
+$text-typography-heading: [object Object] !default;
+$text-typography-body: [object Object] !default;
+$text-fonts-serif: Times New Roman, serif !default;
+$text-fonts-sans: Open Sans, sans-serif !default;
+$text-sizes-heading: 28px !default;
+$text-sizes-body: 16px !default;
+$text-weights-light: thin !default;
+$text-weights-regular: regular !default;
+$text-weights-bold: extra-bold !default;
+$text-line-heights-normal: 1.2 !default;
+$text-line-heights-large: 1.8 !default;
+$transitions-emphasis: [object Object] !default;
+$transitions-fade: [object Object] !default;
+$transitions-easing-functions-accelerate: 0.5,0,1,1 !default;
+$transitions-easing-functions-decelerate: 0,0,0.5,1 !default;
+$transitions-durations-instant: 0ms !default;
+$transitions-durations-short: 100ms !default;
+$transitions-durations-medium: 300ms !default;
+$transitions-durations-long: 600ms !default;
+$borders-heavy: [object Object] !default;
+$borders-wireframe: [object Object] !default;
+$borders-styles-solid: solid !default;
+$borders-styles-dashed: [object Object] !default;
+$shadows-sm: [object Object] !default;
+$shadows-lg: [object Object] !default;
+$shadows-multi: [object Object],[object Object] !default;
+
+$tokens: (
+  'base': (
+    'red': (
+      '100': $base-red-100,
+      '200': $base-red-200,
+      '300': $base-red-300,
+      '400': $base-red-400,
+      '500': $base-red-500,
+      '600': $base-red-600,
+      '700': $base-red-700,
+      '800': $base-red-800
+    )
+  ),
+  'colors': (
+    'black': $colors-black,
+    'white': $colors-white,
+    'orange': (
+      '100': $colors-orange-100,
+      '200': $colors-orange-200,
+      '300': $colors-orange-300,
+      '400': $colors-orange-400,
+      '500': $colors-orange-500,
+      '600': $colors-orange-600,
+      '700': $colors-orange-700,
+      '800': $colors-orange-800,
+      '900': $colors-orange-900
+    )
+  ),
+  'dimensions': (
+    '0': $dimensions-0,
+    '1': $dimensions-1,
+    '2': $dimensions-2,
+    '3': $dimensions-3,
+    '4': $dimensions-4,
+    '5': $dimensions-5,
+    '6': $dimensions-6,
+    '7': $dimensions-7,
+    '8': $dimensions-8,
+    '9': $dimensions-9,
+    '10': $dimensions-10,
+    '11': $dimensions-11,
+    '12': $dimensions-12,
+    '13': $dimensions-13,
+    '14': $dimensions-14,
+    '15': $dimensions-15,
+    'max': $dimensions-max
+  ),
+  'text': (
+    'typography': (
+      'heading': $text-typography-heading,
+      'body': $text-typography-body
+    ),
+    'fonts': (
+      'serif': $text-fonts-serif,
+      'sans': $text-fonts-sans
+    ),
+    'sizes': (
+      'heading': $text-sizes-heading,
+      'body': $text-sizes-body
+    ),
+    'weights': (
+      'light': $text-weights-light,
+      'regular': $text-weights-regular,
+      'bold': $text-weights-bold
+    ),
+    'lineHeights': (
+      'normal': $text-line-heights-normal,
+      'large': $text-line-heights-large
+    )
+  ),
+  'transitions': (
+    'emphasis': $transitions-emphasis,
+    'fade': $transitions-fade,
+    'easingFunctions': (
+      'accelerate': $transitions-easing-functions-accelerate,
+      'decelerate': $transitions-easing-functions-decelerate
+    ),
+    'durations': (
+      'instant': $transitions-durations-instant,
+      'short': $transitions-durations-short,
+      'medium': $transitions-durations-medium,
+      'long': $transitions-durations-long
+    )
+  ),
+  'borders': (
+    'heavy': $borders-heavy,
+    'wireframe': $borders-wireframe,
+    'styles': (
+      'solid': $borders-styles-solid,
+      'dashed': $borders-styles-dashed
+    )
+  ),
+  'shadows': (
+    'sm': $shadows-sm,
+    'lg': $shadows-lg,
+    'multi': $shadows-multi
+  )
+);
