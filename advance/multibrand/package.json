@@ -7,7 +7,8 @@
   "files": ["build", "properties"],
   "scripts": {
     "build": "node ./build.js",
-    "clean": "rm -rf build"
+    "clean": "rimraf build",
+    "both": "npm run clean && npm run build"
   },
   "author": "",
   "license": "Apache-2.0"

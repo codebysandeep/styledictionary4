@@ -2,34 +2,71 @@ import StyleDictionary from 'style-dictionary';
 
 // REGISTER THE CUSTOM TRANSFORMS
 
-StyleDictionary.registerTransform({
-  name: 'size/px', // notice: the name is an override of an existing predefined method (yes, you can do it)
-  type: 'value',
-  filter: function (token) {
-    // this is an example of a possible filter (based on the "cti" values) to show how a "filter" works
-    console.log(token);
-    return token.type === 'fontSize' || token.type === 'dimension';
-  },
-  transform: function (token) {
-    return `${token.value}px`;
-  },
+// REGISTER THE CUSTOM TRANSFORM GROUPS
+StyleDictionary.registerTransformGroup({
+  name: "web-group",
+  transforms: ["attribute/cti", "name/camel"],
+});
+
+StyleDictionary.registerTransformGroup({
+  name: "css-group",
+  transforms: ["attribute/cti", "name/kebab"],
+});
+
+StyleDictionary.registerTransformGroup({
+  name: "scss-group",
+  transforms: ["attribute/cti", "name/kebab"],
+});
+
+StyleDictionary.registerTransformGroup({
+  name: "json-group",
+  transforms: ["attribute/cti", "name/kebab"],
 });
 
 function getStyleDictionaryConfig(brand, platform) {
   return {
-    source: [`tokens/brands/${brand}/*.json`, `tokens/globals/**/*.json`],
+    source: [`tokens/brands/${brand}/*.@(json|json5)`],
     platforms: {
-      web: {
-        transformGroup: 'web',
-        buildPath: `build/web/${brand}/`,
+      customWEB: {
+        transformGroup: 'web-group',
+        buildPath: `build/web/${brand}/js/`,
+        files: [
+          {
+            destination: 'tokens.js',
+            format: 'javascript/es6',
+          }
+        ],
+      },
+
+      customCSS: {
+        transformGroup: 'css-group',
+        buildPath: `build/web/${brand}/css/`,
+        files: [
+          {
+            destination: 'tokens.css',
+            format: 'css/variables',
+          }
+        ],
+      },
+
+      customSCSS: {
+        transformGroup: 'scss-group',
+        buildPath: `build/web/${brand}/scss/`,
         files: [
           {
             destination: 'tokens.scss',
             format: 'scss/variables',
-          },
+          }
+        ],
+      },
+
+      customJSON: {
+        transformGroup: 'json-group',
+        buildPath: `build/web/${brand}/json/`,
+        files: [
           {
-            destination: 'tokens.css',
-            format: 'css/variables',
+            destination: 'tokens.json',
+            format: 'json',
           },
         ],
       },
@@ -39,8 +76,8 @@ function getStyleDictionaryConfig(brand, platform) {
 
 console.log('Build started...');
 
-['brand-1', 'brand-2'].map(function (brand) {
-  ['web'].map(function (platform) {
+['brand-1'].map(function (brand) {
+  ['customWEB', 'customCSS', 'customSCSS', 'customJSON'].map(function (platform) {
     console.log('\n==============================================');
     console.log(`\nProcessing: [${platform}] [${brand}]`);
 
