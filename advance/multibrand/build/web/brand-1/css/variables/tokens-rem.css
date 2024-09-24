@@ -3,25 +3,25 @@
  */
 
 :root {
-  --base-red-100: #fff5f5;
-  --base-red-200: #fed7d7;
-  --base-red-300: #feb2b2;
-  --base-red-400: #fc8181;
-  --base-red-500: #f56565;
-  --base-red-600: #e53e3e;
-  --base-red-700: #c53030;
-  --base-red-800: #9b2c2c;
-  --colors-black: #000000;
-  --colors-white: #ffffff;
-  --colors-orange-100: #fffaf0;
-  --colors-orange-200: #feebc8;
-  --colors-orange-300: #fbd38d;
-  --colors-orange-400: #f6ad55;
-  --colors-orange-500: #ed8936;
-  --colors-orange-600: #dd6b20;
-  --colors-orange-700: #c05621;
-  --colors-orange-800: #9c4221;
-  --colors-orange-900: #7b341e;
+  --base-red-100: rgb(255, 245, 245);
+  --base-red-200: rgb(254, 215, 215);
+  --base-red-300: rgb(254, 178, 178);
+  --base-red-400: rgb(252, 129, 129);
+  --base-red-500: rgb(245, 101, 101);
+  --base-red-600: rgb(229, 62, 62);
+  --base-red-700: rgb(197, 48, 48);
+  --base-red-800: rgb(155, 44, 44);
+  --colors-black: rgb(0, 0, 0);
+  --colors-white: rgb(255, 255, 255);
+  --colors-orange-100: rgb(255, 250, 240);
+  --colors-orange-200: rgb(254, 235, 200);
+  --colors-orange-300: rgb(251, 211, 141);
+  --colors-orange-400: rgb(246, 173, 85);
+  --colors-orange-500: rgb(237, 137, 54);
+  --colors-orange-600: rgb(221, 107, 32);
+  --colors-orange-700: rgb(192, 86, 33);
+  --colors-orange-800: rgb(156, 66, 33);
+  --colors-orange-900: rgb(123, 52, 30);
   --dimensions-0: 0px;
   --dimensions-1: 4px;
   --dimensions-2: 8rem;
@@ -58,11 +58,11 @@
   --transitions-durations-short: 100ms;
   --transitions-durations-medium: 300ms;
   --transitions-durations-long: 600ms;
-  --borders-heavy: 4px solid #000000;
-  --borders-wireframe: 8rem dashed #dd6b20;
+  --borders-heavy: 4px solid rgb(0, 0, 0);
+  --borders-wireframe: 8rem dashed rgb(221, 107, 32);
   --borders-styles-solid: solid;
   --borders-styles-dashed: dashed;
-  --shadows-sm: 0px 4px 12 #000000;
-  --shadows-lg: 0px 8rem 16 #000000;
-  --shadows-multi: 0px 4px 12 #000000, 0px 8rem 16 #000000;
+  --shadows-sm: 0px 4px 12 rgb(0, 0, 0);
+  --shadows-lg: 0px 8rem 16 rgb(0, 0, 0);
+  --shadows-multi: 0px 4px 12 rgb(0, 0, 0), 0px 8rem 16 rgb(0, 0, 0);
 }

@@ -1,50 +1,18 @@
 import StyleDictionary from "style-dictionary";
 
+// REGISTER THE CUSTOM TRANSFORMS
+
 StyleDictionary.registerTransform({
-  name: "custom/css/objectToValue",
-  type: "value",
-  transitive: true,
-  // filter: (token) => token.type === 'color',
+  name: 'custom/size/rem', // notice: the name is an override of an existing predefined method (yes, you can do it)
+  type: 'value',
+
   filter: function (token) {
-    console.log(
-      `Processing token:
-      original: ${token.original}\n
-      attributes: ${token.attributes}\n
-      name: ${token.name}\n
-      type: ${token.$type}\n
-      value: ${token.$value}\n\n`
-    );
-    // Filter tokens where $value is an object (borders, shadows, etc.)
-    return typeof token.$value === "[object Object]" && !Array.isArray(token.$value);
+    console.log(`Token Type: ${token.$type} - Value: ${token.attributes.unit}`);
+    return token.$type === '$fontSize' || token.$type === '$dimension' || token.attributes.unit === 'px' || token.attributes.unit === 'rem';
   },
   transform: function (token) {
-    // Handle border tokens
-    if (token.$type === 'border') {
-      const { color, width, style } = token.$value;
-      return `${width} ${style} ${color}`;
-    }
-
-    // Handle shadow tokens
-    if (token.$type === 'shadow') {
-      const { color, offsetX, offsetY, blur } = token.$value;
-      return `${offsetX} ${offsetY} ${blur} ${color}`;
-    }
-
-    // Handle typography tokens (for fonts)
-    if (token.$type === 'typography') {
-      const { fontFamily, fontWeight, fontSize, lineHeight } = token.$value;
-      return `${fontFamily} ${fontWeight} ${fontSize}/${lineHeight}`;
-    }
-
-    // Handle transition tokens
-    if (token.$type === 'transition') {
-      const { duration, delay, timingFunction } = token.$value;
-      return `${duration} ${delay} ${timingFunction}`;
-    }
-
-    // Default case: stringify other object values
-    return JSON.stringify(token.$value);
-  }
+    return `${token.$value}${token.attributes.unit}`;
+  },
 });
 
 // REGISTER THE CUSTOM TRANSFORM GROUPS
@@ -60,7 +28,7 @@ StyleDictionary.registerTransformGroup({
     "name/kebab",
     "time/seconds",
     "html/icon",
-    "size/rem",
+    "custom/size/rem",
     "color/css",
     "asset/url",
     "fontFamily/css",
@@ -70,7 +38,87 @@ StyleDictionary.registerTransformGroup({
     "typography/css/shorthand",
     "transition/css/shorthand",
     "shadow/css/shorthand",
-  ]
+  ],
+});
+
+StyleDictionary.registerTransformGroup({
+  name: "css-group-rgb",
+  transforms: [
+    "attribute/cti",
+    "name/kebab",
+    "time/seconds",
+    "html/icon",
+    "size/rem",
+    "color/rgb",
+    "asset/url",
+    "fontFamily/css",
+    "cubicBezier/css",
+    "strokeStyle/css/shorthand",
+    "border/css/shorthand",
+    "typography/css/shorthand",
+    "transition/css/shorthand",
+    "shadow/css/shorthand",
+  ],
+});
+
+StyleDictionary.registerTransformGroup({
+  name: "css-group-hsl",
+  transforms: [
+    "attribute/cti",
+    "name/kebab",
+    "time/seconds",
+    "html/icon",
+    "size/rem",
+    "color/hsl",
+    "asset/url",
+    "fontFamily/css",
+    "cubicBezier/css",
+    "strokeStyle/css/shorthand",
+    "border/css/shorthand",
+    "typography/css/shorthand",
+    "transition/css/shorthand",
+    "shadow/css/shorthand",
+  ],
+});
+
+StyleDictionary.registerTransformGroup({
+  name: "css-group-rem",
+  transforms: [
+    "attribute/cti",
+    "name/kebab",
+    "time/seconds",
+    "html/icon",
+    "custom/size/rem",
+    "color/rgb",
+    "asset/url",
+    "fontFamily/css",
+    "cubicBezier/css",
+    "strokeStyle/css/shorthand",
+    "border/css/shorthand",
+    "typography/css/shorthand",
+    "transition/css/shorthand",
+    "shadow/css/shorthand",
+  ],
+});
+
+StyleDictionary.registerTransformGroup({
+  name: "css-group-hsl",
+  transforms: [
+    "attribute/cti",
+    "name/kebab",
+    "time/seconds",
+    "html/icon",
+    "size/rem",
+    "color/hsl",
+    "asset/url",
+    "fontFamily/css",
+    "cubicBezier/css",
+    "strokeStyle/css/shorthand",
+    "border/css/shorthand",
+    "typography/css/shorthand",
+    "transition/css/shorthand",
+    "shadow/css/shorthand",
+  ],
 });
 
 StyleDictionary.registerTransformGroup({
@@ -83,13 +131,12 @@ StyleDictionary.registerTransformGroup({
   transforms: ["attribute/cti", "name/kebab"],
 });
 
-
-
 function getStyleDictionaryConfig(brand, platform) {
   return {
     source: [`tokens/brands/${brand}/*.@(json|json5)`],
     platforms: {
-      customWEB: {
+      // WEB
+      'custom/web': {
         transformGroup: "web-group",
         buildPath: `build/web/${brand}/js/`,
         files: [
@@ -261,7 +308,8 @@ function getStyleDictionaryConfig(brand, platform) {
         ],
       },
 
-      customCSS: {
+      // CSS
+      "custom/css": {
         transformGroup: "css-group",
         buildPath: `build/web/${brand}/css/`,
         files: [
@@ -279,6 +327,7 @@ function getStyleDictionaryConfig(brand, platform) {
             destination: "variables/tokens-dimension.css",
             format: "css/variables",
             filter: { $type: "dimension" },
+            transform: ["size/rem"],
           },
           {
             destination: "variables/tokens-typography.css",
@@ -323,7 +372,67 @@ function getStyleDictionaryConfig(brand, platform) {
         ],
       },
 
-      customSCSS: {
+      // CSS - RGB
+      "custom/css/rgb": {
+        transformGroup: "css-group-rgb",
+        buildPath: `build/web/${brand}/css/`,
+        files: [
+          {
+            destination: "variables/tokens-rgb.css",
+            format: "css/variables",
+          },
+
+          {
+            destination: "variables/tokens-color-rgb.css",
+            format: "css/variables",
+            filter: { $type: "color" },
+          },
+        ],
+      },
+
+      // CSS - HSL
+      "custom/css/hsl": {
+        transformGroup: "css-group-hsl",
+        buildPath: `build/web/${brand}/css/`,
+        files: [
+          {
+            destination: "variables/tokens-hsl.css",
+            format: "css/variables",
+          },
+
+          {
+            destination: "variables/tokens-color-hsl.css",
+            format: "css/variables",
+            filter: { $type: "color" },
+          },
+        ],
+      },
+
+      // CSS - REM
+      "custom/css/rem": {
+        transformGroup: "css-group-rem",
+        buildPath: `build/web/${brand}/css/`,
+        files: [
+          {
+            destination: "variables/tokens-rem.css",
+            format: "css/variables",
+          },
+
+          {
+            destination: "variables/tokens-dimension-rem.css",
+            format: "css/variables",
+            filter: { $type: "dimension" }
+          },
+          {
+            destination: "variables/tokens-typography-rem.css",
+            format: "css/variables",
+            filter: { $type: "typography" },
+          },
+        ],
+      },
+
+      // SCSS
+      'custom/scss': {
         transformGroup: "scss-group",
         buildPath: `build/web/${brand}/scss/`,
         files: [
@@ -338,7 +447,8 @@ function getStyleDictionaryConfig(brand, platform) {
         ],
       },
 
-      customJSON: {
+      // JSON
+      'custom/json': {
         transformGroup: "json-group",
         buildPath: `build/web/${brand}/json/`,
         files: [
@@ -360,14 +470,18 @@ function getStyleDictionaryConfig(brand, platform) {
   };
 }
 
-
-
 console.log("Build started...");
 
 ["brand-1"].map(function (brand) {
-  ["customWEB", "customCSS", "customSCSS", "customJSON"].map(function (
-    platform
-  ) {
+  [
+    "custom/web",
+    "custom/css",
+    "custom/css/rgb",
+    "custom/css/hsl",
+    "custom/css/rem",
+    "custom/scss",
+    "custom/json",
+  ].map(function (platform) {
     console.log("\n==============================================");
     console.log(`\nProcessing: [${platform}] [${brand}]`);
 

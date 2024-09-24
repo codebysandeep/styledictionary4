@@ -9,7 +9,7 @@ module.exports = {
         "$value": {
           "fontFamily": "Open Sans, sans-serif",
           "fontWeight": "extra-bold",
-          "fontSize": "28px",
+          "fontSize": "28",
           "lineHeight": 1.8
         },
         "filePath": "tokens/brands/brand-1/text.json",
@@ -40,7 +40,7 @@ module.exports = {
         "$value": {
           "fontFamily": "Times New Roman, serif",
           "fontWeight": "regular",
-          "fontSize": "16px",
+          "fontSize": "16",
           "lineHeight": 1.2
         },
         "filePath": "tokens/brands/brand-1/text.json",

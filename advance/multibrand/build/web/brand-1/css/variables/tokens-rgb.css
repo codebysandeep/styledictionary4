@@ -1,0 +1,68 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --base-red-100: rgb(255, 245, 245);
+  --base-red-200: rgb(254, 215, 215);
+  --base-red-300: rgb(254, 178, 178);
+  --base-red-400: rgb(252, 129, 129);
+  --base-red-500: rgb(245, 101, 101);
+  --base-red-600: rgb(229, 62, 62);
+  --base-red-700: rgb(197, 48, 48);
+  --base-red-800: rgb(155, 44, 44);
+  --colors-black: rgb(0, 0, 0);
+  --colors-white: rgb(255, 255, 255);
+  --colors-orange-100: rgb(255, 250, 240);
+  --colors-orange-200: rgb(254, 235, 200);
+  --colors-orange-300: rgb(251, 211, 141);
+  --colors-orange-400: rgb(246, 173, 85);
+  --colors-orange-500: rgb(237, 137, 54);
+  --colors-orange-600: rgb(221, 107, 32);
+  --colors-orange-700: rgb(192, 86, 33);
+  --colors-orange-800: rgb(156, 66, 33);
+  --colors-orange-900: rgb(123, 52, 30);
+  --dimensions-0: 0;
+  --dimensions-1: 4rem;
+  --dimensions-2: 8rem;
+  --dimensions-3: 12rem;
+  --dimensions-4: 16rem;
+  --dimensions-5: 20rem;
+  --dimensions-6: 24rem;
+  --dimensions-7: 28rem;
+  --dimensions-8: 32rem;
+  --dimensions-9: 36rem;
+  --dimensions-10: 40rem;
+  --dimensions-11: 44rem;
+  --dimensions-12: 48rem;
+  --dimensions-13: 52rem;
+  --dimensions-14: 56rem;
+  --dimensions-15: 60rem;
+  --dimensions-max: 9999rem;
+  --text-typography-heading: extra-bold 28rem/1.8 'Open Sans', sans-serif;
+  --text-typography-body: regular 16rem/1.2 'Times New Roman', serif;
+  --text-fonts-serif: 'Times New Roman', serif;
+  --text-fonts-sans: 'Open Sans', sans-serif;
+  --text-sizes-heading: 28rem;
+  --text-sizes-body: 16rem;
+  --text-weights-light: thin;
+  --text-weights-regular: regular;
+  --text-weights-bold: extra-bold;
+  --text-line-heights-normal: 1.2;
+  --text-line-heights-large: 1.8;
+  --transitions-emphasis: 300ms cubic-bezier(0.5, 0, 1, 1) 0ms;
+  --transitions-fade: 600ms cubic-bezier(0, 0, 0.5, 1) 0ms;
+  --transitions-easing-functions-accelerate: cubic-bezier(0.5, 0, 1, 1);
+  --transitions-easing-functions-decelerate: cubic-bezier(0, 0, 0.5, 1);
+  --transitions-durations-instant: 0ms;
+  --transitions-durations-short: 100ms;
+  --transitions-durations-medium: 300ms;
+  --transitions-durations-long: 600ms;
+  --borders-heavy: 4rem solid rgb(0, 0, 0);
+  --borders-wireframe: 8rem dashed rgb(221, 107, 32);
+  --borders-styles-solid: solid;
+  --borders-styles-dashed: dashed;
+  --shadows-sm: 0 4rem 12rem rgb(0, 0, 0);
+  --shadows-lg: 0 8rem 16rem rgb(0, 0, 0);
+  --shadows-multi: 0 4rem 12rem rgb(0, 0, 0), 0 8rem 16rem rgb(0, 0, 0);
+}

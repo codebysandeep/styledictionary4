@@ -6,7 +6,7 @@ module.exports = {
   "text": {
     "sizes": {
       "heading": {
-        "$value": "28px",
+        "$value": "28",
         "filePath": "tokens/brands/brand-1/text.json",
         "isSource": true,
         "$type": "fontSize",
@@ -27,7 +27,7 @@ module.exports = {
         ]
       },
       "body": {
-        "$value": "16px",
+        "$value": "16",
         "filePath": "tokens/brands/brand-1/text.json",
         "isSource": true,
         "$type": "fontSize",

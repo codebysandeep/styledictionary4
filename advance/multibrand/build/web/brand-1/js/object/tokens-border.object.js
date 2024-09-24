@@ -7,7 +7,7 @@ var _styleDictionary = {
     "heavy": {
       "$value": {
         "color": "#000000",
-        "width": "4px",
+        "width": "4",
         "style": "solid"
       },
       "filePath": "tokens/brands/brand-1/object-values.json",
@@ -34,7 +34,7 @@ var _styleDictionary = {
     "wireframe": {
       "$value": {
         "color": "#dd6b20",
-        "width": "8px",
+        "width": "8",
         "style": {
           "dashArray": [
             "0.5rem",

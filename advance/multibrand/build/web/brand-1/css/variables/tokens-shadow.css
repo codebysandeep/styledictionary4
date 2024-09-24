@@ -3,7 +3,7 @@
  */
 
 :root {
-  --shadows-sm: 0px 4px 12px #000000;
-  --shadows-lg: 0px 8px 16px #000000;
-  --shadows-multi: 0px 4px 12px #000000, 0px 8px 16px #000000;
+  --shadows-sm: 0px 4px 12 #000000;
+  --shadows-lg: 0px 8rem 16 #000000;
+  --shadows-multi: 0px 4px 12 #000000, 0px 8rem 16 #000000;
 }

@@ -7,9 +7,9 @@ module.exports = {
     "sm": {
       "$value": {
         "color": "#000000",
-        "offsetX": "0px",
-        "offsetY": "4px",
-        "blur": "12px"
+        "offsetX": "0",
+        "offsetY": "4",
+        "blur": "12"
       },
       "filePath": "tokens/brands/brand-1/object-values.json",
       "isSource": true,
@@ -36,9 +36,9 @@ module.exports = {
     "lg": {
       "$value": {
         "color": "#000000",
-        "offsetX": "0px",
-        "offsetY": "8px",
-        "blur": "16px"
+        "offsetX": "0",
+        "offsetY": "8",
+        "blur": "16"
       },
       "filePath": "tokens/brands/brand-1/object-values.json",
       "isSource": true,
@@ -66,15 +66,15 @@ module.exports = {
       "$value": [
         {
           "color": "#000000",
-          "offsetX": "0px",
-          "offsetY": "4px",
-          "blur": "12px"
+          "offsetX": "0",
+          "offsetY": "4",
+          "blur": "12"
         },
         {
           "color": "#000000",
-          "offsetX": "0px",
-          "offsetY": "8px",
-          "blur": "16px"
+          "offsetX": "0",
+          "offsetY": "8",
+          "blur": "16"
         }
       ],
       "filePath": "tokens/brands/brand-1/object-values.json",

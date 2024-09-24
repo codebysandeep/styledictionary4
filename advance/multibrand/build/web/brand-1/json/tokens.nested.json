@@ -27,36 +27,36 @@
     }
   },
   "dimensions": {
-    "0": "0px",
-    "1": "4px",
-    "2": "8px",
-    "3": "12px",
-    "4": "16px",
-    "5": "20px",
-    "6": "24px",
-    "7": "28px",
-    "8": "32px",
-    "9": "36px",
-    "10": "40px",
-    "11": "44px",
-    "12": "48px",
-    "13": "52px",
-    "14": "56px",
-    "15": "60px",
-    "max": "9999px"
+    "0": "0",
+    "1": "4",
+    "2": "8",
+    "3": "12",
+    "4": "16",
+    "5": "20",
+    "6": "24",
+    "7": "28",
+    "8": "32",
+    "9": "36",
+    "10": "40",
+    "11": "44",
+    "12": "48",
+    "13": "52",
+    "14": "56",
+    "15": "60",
+    "max": "9999"
   },
   "text": {
     "typography": {
       "heading": {
         "fontFamily": "Open Sans, sans-serif",
         "fontWeight": "extra-bold",
-        "fontSize": "28px",
+        "fontSize": "28",
         "lineHeight": 1.8
       },
       "body": {
         "fontFamily": "Times New Roman, serif",
         "fontWeight": "regular",
-        "fontSize": "16px",
+        "fontSize": "16",
         "lineHeight": 1.2
       }
     },
@@ -65,8 +65,8 @@
       "sans": "Open Sans, sans-serif"
     },
     "sizes": {
-      "heading": "28px",
-      "body": "16px"
+      "heading": "28",
+      "body": "16"
     },
     "weights": {
       "light": "thin",
@@ -123,12 +123,12 @@
   "borders": {
     "heavy": {
       "color": "#000000",
-      "width": "4px",
+      "width": "4",
       "style": "solid"
     },
     "wireframe": {
       "color": "#dd6b20",
-      "width": "8px",
+      "width": "8",
       "style": {
         "dashArray": [
           "0.5rem",
@@ -151,28 +151,28 @@
   "shadows": {
     "sm": {
       "color": "#000000",
-      "offsetX": "0px",
-      "offsetY": "4px",
-      "blur": "12px"
+      "offsetX": "0",
+      "offsetY": "4",
+      "blur": "12"
     },
     "lg": {
       "color": "#000000",
-      "offsetX": "0px",
-      "offsetY": "8px",
-      "blur": "16px"
+      "offsetX": "0",
+      "offsetY": "8",
+      "blur": "16"
     },
     "multi": [
       {
         "color": "#000000",
-        "offsetX": "0px",
-        "offsetY": "4px",
-        "blur": "12px"
+        "offsetX": "0",
+        "offsetY": "4",
+        "blur": "12"
       },
       {
         "color": "#000000",
-        "offsetX": "0px",
-        "offsetY": "8px",
-        "blur": "16px"
+        "offsetX": "0",
+        "offsetY": "8",
+        "blur": "16"
       }
     ]
   }

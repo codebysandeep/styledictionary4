@@ -408,69 +408,87 @@ module.exports = {
   },
   "dimensions": {
     "0": {
-      "$value": "0px",
+      "$value": "0",
+      "category": "base",
+      "attributes": {
+        "unit": "px",
+        "category": "dimensions",
+        "type": "0"
+      },
       "filePath": "tokens/brands/brand-1/dimensions.json",
       "isSource": true,
       "$type": "dimension",
       "original": {
-        "$value": "0px",
+        "$value": "0",
+        "category": "base",
+        "attributes": {
+          "unit": "px"
+        },
         "$type": "dimension"
       },
       "name": "dimensions0",
-      "attributes": {
-        "category": "dimensions",
-        "type": "0"
-      },
       "path": [
         "dimensions",
         "0"
       ]
     },
     "1": {
-      "$value": "4px",
+      "$value": "4",
+      "category": "base",
+      "attributes": {
+        "unit": "px",
+        "category": "dimensions",
+        "type": "1"
+      },
       "filePath": "tokens/brands/brand-1/dimensions.json",
       "isSource": true,
       "$type": "dimension",
       "original": {
-        "$value": "4px",
+        "$value": "4",
+        "category": "base",
+        "attributes": {
+          "unit": "px"
+        },
         "$type": "dimension"
       },
       "name": "dimensions1",
-      "attributes": {
-        "category": "dimensions",
-        "type": "1"
-      },
       "path": [
         "dimensions",
         "1"
       ]
     },
     "2": {
-      "$value": "8px",
+      "$value": "8",
+      "category": "base",
+      "attributes": {
+        "unit": "rem",
+        "category": "dimensions",
+        "type": "2"
+      },
       "filePath": "tokens/brands/brand-1/dimensions.json",
       "isSource": true,
       "$type": "dimension",
       "original": {
-        "$value": "8px",
+        "$value": "8",
+        "category": "base",
+        "attributes": {
+          "unit": "rem"
+        },
         "$type": "dimension"
       },
       "name": "dimensions2",
-      "attributes": {
-        "category": "dimensions",
-        "type": "2"
-      },
       "path": [
         "dimensions",
         "2"
       ]
     },
     "3": {
-      "$value": "12px",
+      "$value": "12",
       "filePath": "tokens/brands/brand-1/dimensions.json",
       "isSource": true,
       "$type": "dimension",
       "original": {
-        "$value": "12px",
+        "$value": "12",
         "$type": "dimension"
       },
       "name": "dimensions3",
@@ -484,12 +502,12 @@ module.exports = {
       ]
     },
     "4": {
-      "$value": "16px",
+      "$value": "16",
       "filePath": "tokens/brands/brand-1/dimensions.json",
       "isSource": true,
       "$type": "dimension",
       "original": {
-        "$value": "16px",
+        "$value": "16",
         "$type": "dimension"
       },
       "name": "dimensions4",
@@ -503,12 +521,12 @@ module.exports = {
       ]
     },
     "5": {
-      "$value": "20px",
+      "$value": "20",
       "filePath": "tokens/brands/brand-1/dimensions.json",
       "isSource": true,
       "$type": "dimension",
       "original": {
-        "$value": "20px",
+        "$value": "20",
         "$type": "dimension"
       },
       "name": "dimensions5",
@@ -522,12 +540,12 @@ module.exports = {
       ]
     },
     "6": {
-      "$value": "24px",
+      "$value": "24",
       "filePath": "tokens/brands/brand-1/dimensions.json",
       "isSource": true,
       "$type": "dimension",
       "original": {
-        "$value": "24px",
+        "$value": "24",
         "$type": "dimension"
       },
       "name": "dimensions6",
@@ -541,12 +559,12 @@ module.exports = {
       ]
     },
     "7": {
-      "$value": "28px",
+      "$value": "28",
       "filePath": "tokens/brands/brand-1/dimensions.json",
       "isSource": true,
       "$type": "dimension",
       "original": {
-        "$value": "28px",
+        "$value": "28",
         "$type": "dimension"
       },
       "name": "dimensions7",
@@ -560,12 +578,12 @@ module.exports = {
       ]
     },
     "8": {
-      "$value": "32px",
+      "$value": "32",
       "filePath": "tokens/brands/brand-1/dimensions.json",
       "isSource": true,
       "$type": "dimension",
       "original": {
-        "$value": "32px",
+        "$value": "32",
         "$type": "dimension"
       },
       "name": "dimensions8",
@@ -579,12 +597,12 @@ module.exports = {
       ]
     },
     "9": {
-      "$value": "36px",
+      "$value": "36",
       "filePath": "tokens/brands/brand-1/dimensions.json",
       "isSource": true,
       "$type": "dimension",
       "original": {
-        "$value": "36px",
+        "$value": "36",
         "$type": "dimension"
       },
       "name": "dimensions9",
@@ -598,12 +616,12 @@ module.exports = {
       ]
     },
     "10": {
-      "$value": "40px",
+      "$value": "40",
       "filePath": "tokens/brands/brand-1/dimensions.json",
       "isSource": true,
       "$type": "dimension",
       "original": {
-        "$value": "40px",
+        "$value": "40",
         "$type": "dimension"
       },
       "name": "dimensions10",
@@ -617,12 +635,12 @@ module.exports = {
       ]
     },
     "11": {
-      "$value": "44px",
+      "$value": "44",
       "filePath": "tokens/brands/brand-1/dimensions.json",
       "isSource": true,
       "$type": "dimension",
       "original": {
-        "$value": "44px",
+        "$value": "44",
         "$type": "dimension"
       },
       "name": "dimensions11",
@@ -636,12 +654,12 @@ module.exports = {
       ]
     },
     "12": {
-      "$value": "48px",
+      "$value": "48",
       "filePath": "tokens/brands/brand-1/dimensions.json",
       "isSource": true,
       "$type": "dimension",
       "original": {
-        "$value": "48px",
+        "$value": "48",
         "$type": "dimension"
       },
       "name": "dimensions12",
@@ -655,12 +673,12 @@ module.exports = {
       ]
     },
     "13": {
-      "$value": "52px",
+      "$value": "52",
       "filePath": "tokens/brands/brand-1/dimensions.json",
       "isSource": true,
       "$type": "dimension",
       "original": {
-        "$value": "52px",
+        "$value": "52",
         "$type": "dimension"
       },
       "name": "dimensions13",
@@ -674,12 +692,12 @@ module.exports = {
       ]
     },
     "14": {
-      "$value": "56px",
+      "$value": "56",
       "filePath": "tokens/brands/brand-1/dimensions.json",
       "isSource": true,
       "$type": "dimension",
       "original": {
-        "$value": "56px",
+        "$value": "56",
         "$type": "dimension"
       },
       "name": "dimensions14",
@@ -693,12 +711,12 @@ module.exports = {
       ]
     },
     "15": {
-      "$value": "60px",
+      "$value": "60",
       "filePath": "tokens/brands/brand-1/dimensions.json",
       "isSource": true,
       "$type": "dimension",
       "original": {
-        "$value": "60px",
+        "$value": "60",
         "$type": "dimension"
       },
       "name": "dimensions15",
@@ -712,12 +730,12 @@ module.exports = {
       ]
     },
     "max": {
-      "$value": "9999px",
+      "$value": "9999",
       "filePath": "tokens/brands/brand-1/dimensions.json",
       "isSource": true,
       "$type": "dimension",
       "original": {
-        "$value": "9999px",
+        "$value": "9999",
         "$type": "dimension"
       },
       "name": "dimensionsMax",
@@ -737,7 +755,7 @@ module.exports = {
         "$value": {
           "fontFamily": "Open Sans, sans-serif",
           "fontWeight": "extra-bold",
-          "fontSize": "28px",
+          "fontSize": "28",
           "lineHeight": 1.8
         },
         "filePath": "tokens/brands/brand-1/text.json",
@@ -768,7 +786,7 @@ module.exports = {
         "$value": {
           "fontFamily": "Times New Roman, serif",
           "fontWeight": "regular",
-          "fontSize": "16px",
+          "fontSize": "16",
           "lineHeight": 1.2
         },
         "filePath": "tokens/brands/brand-1/text.json",
@@ -842,7 +860,7 @@ module.exports = {
     },
     "sizes": {
       "heading": {
-        "$value": "28px",
+        "$value": "28",
         "filePath": "tokens/brands/brand-1/text.json",
         "isSource": true,
         "$type": "fontSize",
@@ -863,7 +881,7 @@ module.exports = {
         ]
       },
       "body": {
-        "$value": "16px",
+        "$value": "16",
         "filePath": "tokens/brands/brand-1/text.json",
         "isSource": true,
         "$type": "fontSize",
@@ -1214,7 +1232,7 @@ module.exports = {
     "heavy": {
       "$value": {
         "color": "#000000",
-        "width": "4px",
+        "width": "4",
         "style": "solid"
       },
       "filePath": "tokens/brands/brand-1/object-values.json",
@@ -1241,7 +1259,7 @@ module.exports = {
     "wireframe": {
       "$value": {
         "color": "#dd6b20",
-        "width": "8px",
+        "width": "8",
         "style": {
           "dashArray": [
             "0.5rem",
@@ -1332,9 +1350,9 @@ module.exports = {
     "sm": {
       "$value": {
         "color": "#000000",
-        "offsetX": "0px",
-        "offsetY": "4px",
-        "blur": "12px"
+        "offsetX": "0",
+        "offsetY": "4",
+        "blur": "12"
       },
       "filePath": "tokens/brands/brand-1/object-values.json",
       "isSource": true,
@@ -1361,9 +1379,9 @@ module.exports = {
     "lg": {
       "$value": {
         "color": "#000000",
-        "offsetX": "0px",
-        "offsetY": "8px",
-        "blur": "16px"
+        "offsetX": "0",
+        "offsetY": "8",
+        "blur": "16"
       },
       "filePath": "tokens/brands/brand-1/object-values.json",
       "isSource": true,
@@ -1391,15 +1409,15 @@ module.exports = {
       "$value": [
         {
           "color": "#000000",
-          "offsetX": "0px",
-          "offsetY": "4px",
-          "blur": "12px"
+          "offsetX": "0",
+          "offsetY": "4",
+          "blur": "12"
         },
         {
           "color": "#000000",
-          "offsetX": "0px",
-          "offsetY": "8px",
-          "blur": "16px"
+          "offsetX": "0",
+          "offsetY": "8",
+          "blur": "16"
         }
       ],
       "filePath": "tokens/brands/brand-1/object-values.json",
