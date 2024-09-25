@@ -2,25 +2,98 @@ import StyleDictionary from "style-dictionary";
 
 // REGISTER THE CUSTOM TRANSFORMS
 
+// CUSTOM TRANSFORMS - SIZE / UNIT
 StyleDictionary.registerTransform({
-  name: 'custom/size/rem', // notice: the name is an override of an existing predefined method (yes, you can do it)
-  type: 'value',
+  name: "custom/size/unit",
+  type: "value",
 
   filter: function (token) {
-    console.log(`Token Type: ${token.$type} - Value: ${token.attributes.unit}`);
-    return token.$type === '$fontSize' || token.$type === '$dimension' || token.attributes.unit === 'px' || token.attributes.unit === 'rem';
+    // console.log(`Token Type: ${token.$type} - Value: ${token.attributes.unit}`);
+    return (
+      token.$type === "$fontSize" ||
+      token.$type === "$dimension" ||
+      token.attributes.unit === "px" ||
+      token.attributes.unit === "rem"
+    );
   },
   transform: function (token) {
     return `${token.$value}${token.attributes.unit}`;
   },
 });
 
-// REGISTER THE CUSTOM TRANSFORM GROUPS
-StyleDictionary.registerTransformGroup({
-  name: "web-group",
-  transforms: ["attribute/cti", "name/camel"],
+// CUSTOM TRANSFORMS - SIZE / UNIT / REM
+StyleDictionary.registerTransform({
+  name: "custom/size/unit/rem",
+  type: "value",
+
+  filter: function (token) {
+    console.log(`Token Type: ${token.$type} - Value: ${token.attributes.unit}`);
+    return (
+      token.$type === "$fontSize" ||
+      token.$type === "$dimension" ||
+      token.attributes.unit === "px" ||
+      token.attributes.unit === "rem"
+    );
+  },
+  transform: function (token) {
+    return `${token.$value}rem`;
+  },
 });
 
+// REGISTER THE CUSTOM TRANSFORM GROUPS
+
+// CUSTOM TRANSFORM GROUPS - WEB
+StyleDictionary.registerTransformGroup({
+  name: "web-group",
+  transforms: ["attribute/cti", "name/camel", "custom/size/unit"],
+});
+
+// CUSTOM TRANSFORM GROUPS - WEB / RGB
+StyleDictionary.registerTransformGroup({
+  name: "web-group-rgb",
+  transforms: ["attribute/cti", "name/camel", "custom/size/unit", "color/rgb"],
+});
+
+// CUSTOM TRANSFORM GROUPS - WEB / HSL
+StyleDictionary.registerTransformGroup({
+  name: "web-group-hsl",
+  transforms: ["attribute/cti", "name/camel", "custom/size/unit", "color/hsl"],
+});
+
+
+// CUSTOM TRANSFORM GROUPS - WEB / SIZE / UNIT / REM
+StyleDictionary.registerTransformGroup({
+  name: "web-group-rem",
+  transforms: [
+    "attribute/cti", "name/camel", "size/pxToRem", "color/hsl"
+  ],
+});
+
+// CUSTOM TRANSFORM GROUPS - WEB / RGB / REM
+StyleDictionary.registerTransformGroup({
+  name: "web-group-rgb-rem",
+  transforms: [
+    "attribute/cti", 
+    "name/camel",
+    "size/pxToRem",
+    "color/rgb",
+  ],
+});
+
+// CUSTOM TRANSFORM GROUPS - WEB / HSL / REM
+StyleDictionary.registerTransformGroup({
+  name: "web-group-hsl-rem",
+  transforms: [
+    "attribute/cti", 
+    "name/camel",
+    "size/pxToRem",
+    "color/hsl",
+  ],
+});
+
+
+
+// CUSTOM TRANSFORM GROUPS - CSS
 StyleDictionary.registerTransformGroup({
   name: "css-group",
   transforms: [
@@ -28,7 +101,7 @@ StyleDictionary.registerTransformGroup({
     "name/kebab",
     "time/seconds",
     "html/icon",
-    "custom/size/rem",
+    "custom/size/unit",
     "color/css",
     "asset/url",
     "fontFamily/css",
@@ -41,6 +114,7 @@ StyleDictionary.registerTransformGroup({
   ],
 });
 
+// CUSTOM TRANSFORM GROUPS - CSS / RGB
 StyleDictionary.registerTransformGroup({
   name: "css-group-rgb",
   transforms: [
@@ -48,7 +122,7 @@ StyleDictionary.registerTransformGroup({
     "name/kebab",
     "time/seconds",
     "html/icon",
-    "size/rem",
+    "custom/size/unit",
     "color/rgb",
     "asset/url",
     "fontFamily/css",
@@ -61,6 +135,7 @@ StyleDictionary.registerTransformGroup({
   ],
 });
 
+// CUSTOM TRANSFORM GROUPS - CSS / HSL
 StyleDictionary.registerTransformGroup({
   name: "css-group-hsl",
   transforms: [
@@ -68,7 +143,7 @@ StyleDictionary.registerTransformGroup({
     "name/kebab",
     "time/seconds",
     "html/icon",
-    "size/rem",
+    "custom/size/unit",
     "color/hsl",
     "asset/url",
     "fontFamily/css",
@@ -81,6 +156,7 @@ StyleDictionary.registerTransformGroup({
   ],
 });
 
+// CUSTOM TRANSFORM GROUPS - CSS / SIZE / UNIT / REM
 StyleDictionary.registerTransformGroup({
   name: "css-group-rem",
   transforms: [
@@ -88,7 +164,28 @@ StyleDictionary.registerTransformGroup({
     "name/kebab",
     "time/seconds",
     "html/icon",
-    "custom/size/rem",
+    "size/pxToRem",
+    "color/hex",
+    "asset/url",
+    "fontFamily/css",
+    "cubicBezier/css",
+    "strokeStyle/css/shorthand",
+    "border/css/shorthand",
+    "typography/css/shorthand",
+    "transition/css/shorthand",
+    "shadow/css/shorthand",
+  ],
+});
+
+// CUSTOM TRANSFORM GROUPS - CSS / RGB / REM
+StyleDictionary.registerTransformGroup({
+  name: "css-group-rgb-rem",
+  transforms: [
+    "attribute/cti",
+    "name/kebab",
+    "time/seconds",
+    "html/icon",
+    "size/pxToRem",
     "color/rgb",
     "asset/url",
     "fontFamily/css",
@@ -101,14 +198,15 @@ StyleDictionary.registerTransformGroup({
   ],
 });
 
+// CUSTOM TRANSFORM GROUPS - CSS / HSL / REM
 StyleDictionary.registerTransformGroup({
-  name: "css-group-hsl",
+  name: "css-group-hsl-rem",
   transforms: [
     "attribute/cti",
     "name/kebab",
     "time/seconds",
     "html/icon",
-    "size/rem",
+    "size/pxToRem",
     "color/hsl",
     "asset/url",
     "fontFamily/css",
@@ -123,12 +221,12 @@ StyleDictionary.registerTransformGroup({
 
 StyleDictionary.registerTransformGroup({
   name: "scss-group",
-  transforms: ["attribute/cti", "name/kebab"],
+  transforms: ["attribute/cti", "name/kebab", "custom/size/unit"],
 });
 
 StyleDictionary.registerTransformGroup({
   name: "json-group",
-  transforms: ["attribute/cti", "name/kebab"],
+  transforms: ["attribute/cti", "name/kebab", "custom/size/unit"],
 });
 
 function getStyleDictionaryConfig(brand, platform) {
@@ -136,174 +234,372 @@ function getStyleDictionaryConfig(brand, platform) {
     source: [`tokens/brands/${brand}/*.@(json|json5)`],
     platforms: {
       // WEB
-      'custom/web': {
+      "custom/web": {
         transformGroup: "web-group",
         buildPath: `build/web/${brand}/js/`,
         files: [
           {
-            destination: "module/tokens.module.js",
+            destination: "module/all/all.module.js",
             format: "javascript/module",
           },
           {
-            destination: "object/tokens.object.js",
+            destination: "object/all/all.object.js",
             format: "javascript/object",
           },
           {
-            destination: "es6/tokens.es6.js",
+            destination: "es6/all/all.es6.js",
             format: "javascript/es6",
           },
 
+          // Module
           {
-            destination: "module/tokens-color.module.js",
+            destination: "module/color/colors-hex.module.js",
             format: "javascript/module",
             filter: { $type: "color" },
           },
           {
-            destination: "module/tokens-dimension.module.js",
+            destination: "module/dimension/dimensions.module.js",
             format: "javascript/module",
             filter: { $type: "dimension" },
           },
           {
-            destination: "module/tokens-typography.module.js",
+            destination: "module/typography/typography.module.js",
             format: "javascript/module",
             filter: { $type: "typography" },
           },
           {
-            destination: "module/tokens-transition.module.js",
-            format: "javascript/module",
-            filter: { $type: "transition" },
-          },
-          {
-            destination: "module/tokens-border.module.js",
-            format: "javascript/module",
-            filter: { $type: "border" },
-          },
-          {
-            destination: "module/tokens-shadow.module.js",
-            format: "javascript/module",
-            filter: { $type: "shadow" },
-          },
-          {
-            destination: "module/tokens-fontFamily.module.js",
+            destination: "module/typography/fontFamily.module.js",
             format: "javascript/module",
             filter: { $type: "fontFamily" },
           },
           {
-            destination: "module/tokens-fontSize.module.js",
+            destination: "module/typography/fontSize.module.js",
             format: "javascript/module",
             filter: { $type: "fontSize" },
           },
           {
-            destination: "module/tokens-fontWeight.module.js",
+            destination: "module/typography/fontWeight.module.js",
             format: "javascript/module",
             filter: { $type: "fontWeight" },
           },
           {
-            destination: "module/tokens-number.module.js",
+            destination: "module/transition/transition.module.js",
+            format: "javascript/module",
+            filter: { $type: "transition" },
+          },
+          {
+            destination: "module/border/border.module.js",
+            format: "javascript/module",
+            filter: { $type: "border" },
+          },
+          {
+            destination: "module/shadow/shadow.module.js",
+            format: "javascript/module",
+            filter: { $type: "shadow" },
+          },
+          {
+            destination: "module/number/number.module.js",
             format: "javascript/module",
             filter: { $type: "number" },
           },
 
+          // Object
           {
-            destination: "object/tokens-color.object.js",
-            format: "javascript/object",
-            filter: { $type: "color" },
-          },
-          {
-            destination: "object/tokens-dimension.object.js",
-            format: "javascript/object",
-            filter: { $type: "dimension" },
-          },
-          {
-            destination: "object/tokens-typography.object.js",
-            format: "javascript/object",
-            filter: { $type: "typography" },
-          },
-          {
-            destination: "object/tokens-transition.object.js",
-            format: "javascript/object",
-            filter: { $type: "transition" },
-          },
-          {
-            destination: "object/tokens-border.object.js",
-            format: "javascript/object",
-            filter: { $type: "border" },
-          },
-          {
-            destination: "object/tokens-shadow.object.js",
-            format: "javascript/object",
-            filter: { $type: "shadow" },
-          },
-          {
-            destination: "object/tokens-fontFamily.object.js",
+            destination: "object/typography/fontFamily.object.js",
             format: "javascript/object",
             filter: { $type: "fontFamily" },
           },
           {
-            destination: "object/tokens-fontSize.object.js",
+            destination: "object/typography/fontSize.object.js",
             format: "javascript/object",
             filter: { $type: "fontSize" },
           },
           {
-            destination: "object/tokens-fontWeight.object.js",
+            destination: "object/typography/fontWeight.object.js",
             format: "javascript/object",
             filter: { $type: "fontWeight" },
           },
           {
-            destination: "object/tokens-number.object.js",
+            destination: "object/transition/transition.object.js",
+            format: "javascript/object",
+            filter: { $type: "transition" },
+          },
+          {
+            destination: "object/border/border.object.js",
+            format: "javascript/object",
+            filter: { $type: "border" },
+          },
+          {
+            destination: "object/shadow/shadow.object.js",
+            format: "javascript/object",
+            filter: { $type: "shadow" },
+          },
+          {
+            destination: "object/number/number.object.js",
             format: "javascript/object",
             filter: { $type: "number" },
           },
 
+          // es6
           {
-            destination: "es6/tokens-color.es6.js",
-            format: "javascript/es6",
-            filter: { $type: "color" },
-          },
-          {
-            destination: "es6/tokens-dimension.es6.js",
-            format: "javascript/es6",
-            filter: { $type: "dimension" },
-          },
-          {
-            destination: "es6/tokens-typography.es6.js",
-            format: "javascript/es6",
-            filter: { $type: "typography" },
-          },
-          {
-            destination: "es6/tokens-transition.es6.js",
-            format: "javascript/es6",
-            filter: { $type: "transition" },
-          },
-          {
-            destination: "es6/tokens-border.es6.js",
-            format: "javascript/es6",
-            filter: { $type: "border" },
-          },
-          {
-            destination: "es6/tokens-shadow.es6.js",
-            format: "javascript/es6",
-            filter: { $type: "shadow" },
-          },
-          {
-            destination: "es6/tokens-fontFamily.es6.js",
+            destination: "es6/typography/fontFamily.es6.js",
             format: "javascript/es6",
             filter: { $type: "fontFamily" },
           },
           {
-            destination: "es6/tokens-fontSize.es6.js",
+            destination: "es6/typography/fontSize.es6.js",
             format: "javascript/es6",
             filter: { $type: "fontSize" },
           },
           {
-            destination: "es6/tokens-fontWeight.es6.js",
+            destination: "es6/typography/fontWeight.es6.js",
             format: "javascript/es6",
             filter: { $type: "fontWeight" },
           },
           {
-            destination: "es6/tokens-number.es6.js",
+            destination: "es6/transition/transition.es6.js",
+            format: "javascript/es6",
+            filter: { $type: "transition" },
+          },
+          {
+            destination: "es6/border/border.es6.js",
+            format: "javascript/es6",
+            filter: { $type: "border" },
+          },
+          {
+            destination: "es6/shadow/shadow.es6.js",
+            format: "javascript/es6",
+            filter: { $type: "shadow" },
+          },
+          {
+            destination: "es6/number/number.es6.js",
             format: "javascript/es6",
             filter: { $type: "number" },
+          },
+        ],
+      },
+
+      // WEB - RGB
+      "custom/web/rgb": {
+        transformGroup: "web-group-rgb",
+        buildPath: `build/web/${brand}/js/`,
+        files: [
+          {
+            destination: "module/all/all-rgb.module.js",
+            format: "javascript/module",
+          },
+          {
+            destination: "object/all/all-rgb.object.js",
+            format: "javascript/object",
+          },
+          {
+            destination: "es6/all/all-rgb.es6.js",
+            format: "javascript/es6",
+          },
+
+          // Module
+          {
+            destination: "module/color/colors-rgb.module.js",
+            format: "javascript/module",
+            filter: { $type: "color" },
+          },
+
+          // Object
+          {
+            destination: "object/color/colors-rgb.object.js",
+            format: "javascript/object",
+            filter: { $type: "fontFamily" },
+          },
+
+          // es6
+          {
+            destination: "es6/color/colors-rgb.es6.js",
+            format: "javascript/es6",
+            filter: { $type: "fontFamily" },
+          },
+        ],
+      },
+
+      // WEB - HSL
+      "custom/web/hsl": {
+        transformGroup: "web-group-hsl",
+        buildPath: `build/web/${brand}/js/`,
+        files: [
+          {
+            destination: "module/all/all-hsl.module.js",
+            format: "javascript/module",
+          },
+          {
+            destination: "object/all/all-hsl.object.js",
+            format: "javascript/object",
+          },
+          {
+            destination: "es6/all/all-hsl.es6.js",
+            format: "javascript/es6",
+          },
+
+          // Module
+          {
+            destination: "module/color/colors-hsl.module.js",
+            format: "javascript/module",
+            filter: { $type: "color" },
+          },
+
+          // Object
+          {
+            destination: "object/color/colors-hsl.module.js",
+            format: "javascript/object",
+            filter: { $type: "fontFamily" },
+          },
+
+          // es6
+          {
+            destination: "es6/color/colors-hsl.module.js",
+            format: "javascript/es6",
+            filter: { $type: "fontFamily" },
+          },
+        ],
+      },
+
+      // WEB - REM
+      "custom/web/rem": {
+        transformGroup: "web-group-rem",
+        buildPath: `build/web/${brand}/js/`,
+        files: [
+
+          {
+            destination: "module/all/all-rem.module.js",
+            format: "javascript/module",
+          },
+          {
+            destination: "object/all/all-rem.object.js",
+            format: "javascript/object",
+          },
+          {
+            destination: "es6/all/all-rem.es6.js",
+            format: "javascript/es6",
+          },
+
+          // Module
+          {
+            destination: "module/dimension/dimensions-rem.js",
+            format: "javascript/module",
+            filter: { $type: "dimension" },
+          },
+          {
+            destination: "module/typography/typography-rem.js",
+            format: "javascript/module",
+            filter: { $type: "typography" },
+          },
+          {
+            destination: "module/typography/fontSize-rem.js",
+            format: "javascript/module",
+            filter: { $type: "fontSize" },
+          },
+          {
+            destination: "module/border/border-rem.js",
+            format: "javascript/module",
+            filter: { $type: "border" },
+          },
+          {
+            destination: "module/shadow/shadow-rem.js",
+            format: "javascript/module",
+            filter: { $type: "shadow" },
+          },
+
+          // Object
+          {
+            destination: "object/dimension/dimensions-rem.js",
+            format: "javascript/object",
+            filter: { $type: "dimension" },
+          },
+          {
+            destination: "object/typography/typography-rem.js",
+            format: "javascript/object",
+            filter: { $type: "typography" },
+          },
+          {
+            destination: "object/typography/fontSize-rem.js",
+            format: "javascript/object",
+            filter: { $type: "fontSize" },
+          },
+          {
+            destination: "object/border/border-rem.js",
+            format: "javascript/object",
+            filter: { $type: "border" },
+          },
+          {
+            destination: "object/shadow/shadow-rem.js",
+            format: "javascript/object",
+            filter: { $type: "shadow" },
+          },
+
+          // ES6
+          {
+            destination: "es6/dimension/dimensions-rem.js",
+            format: "javascript/es6",
+            filter: { $type: "dimension" },
+          },
+          {
+            destination: "es6/typography/typography-rem.js",
+            format: "javascript/es6",
+            filter: { $type: "typography" },
+          },
+          {
+            destination: "es6/typography/fontSize-rem.js",
+            format: "javascript/es6",
+            filter: { $type: "fontSize" },
+          },
+          {
+            destination: "es6/border/border-rem.js",
+            format: "javascript/es6",
+            filter: { $type: "border" },
+          },
+          {
+            destination: "es6/shadow/shadow-rem.js",
+            format: "javascript/es6",
+            filter: { $type: "shadow" },
+          },
+
+        ],
+      },
+
+       // WEB - RGB/REM
+       "custom/web/rgb/rem": {
+        transformGroup: "web-group-rgb-rem",
+        buildPath: `build/web/${brand}/js/`,
+        files: [
+          {
+            destination: "module/all/all-rgb-rem.module.js",
+            format: "javascript/module",
+          },
+          {
+            destination: "object/all/all-rgb-rem.object.js",
+            format: "javascript/object",
+          },
+          {
+            destination: "es6/all/all-rgb-rem.es6.js",
+            format: "javascript/es6",
+          },
+        ],
+      },
+
+      // WEB - HSL/REM
+      "custom/web/hsl/rem": {
+        transformGroup: "web-group-hsl-rem",
+        buildPath: `build/web/${brand}/js/`,
+        files: [
+          {
+            destination: "module/all/all-hsl-rem.module.js",
+            format: "javascript/module",
+          },
+          {
+            destination: "object/all/all-hsl-rem.object.js",
+            format: "javascript/object",
+          },
+          {
+            destination: "es6/all/all-hsl-rem.es6.js",
+            format: "javascript/es6",
           },
         ],
       },
@@ -314,58 +610,56 @@ function getStyleDictionaryConfig(brand, platform) {
         buildPath: `build/web/${brand}/css/`,
         files: [
           {
-            destination: "variables/tokens.css",
+            destination: "all/all.css",
             format: "css/variables",
           },
-
           {
-            destination: "variables/tokens-color.css",
+            destination: "color/colors-hex.css",
             format: "css/variables",
             filter: { $type: "color" },
           },
           {
-            destination: "variables/tokens-dimension.css",
+            destination: "dimension/dimensions.css",
             format: "css/variables",
             filter: { $type: "dimension" },
-            transform: ["size/rem"],
           },
           {
-            destination: "variables/tokens-typography.css",
+            destination: "typography/typography.css",
             format: "css/variables",
             filter: { $type: "typography" },
           },
           {
-            destination: "variables/tokens-transition.css",
-            format: "css/variables",
-            filter: { $type: "transition" },
-          },
-          {
-            destination: "variables/tokens-border.css",
-            format: "css/variables",
-            filter: { $type: "border" },
-          },
-          {
-            destination: "variables/tokens-shadow.css",
-            format: "css/variables",
-            filter: { $type: "shadow" },
-          },
-          {
-            destination: "variables/tokens-fontFamily.css",
+            destination: "typography/fontFamily.css",
             format: "css/variables",
             filter: { $type: "fontFamily" },
           },
           {
-            destination: "variables/tokens-fontSize.css",
+            destination: "typography/fontSize.css",
             format: "css/variables",
             filter: { $type: "fontSize" },
           },
           {
-            destination: "variables/tokens-fontWeight.css",
+            destination: "typography/fontWeight.css",
             format: "css/variables",
             filter: { $type: "fontWeight" },
           },
           {
-            destination: "variables/tokens-number.css",
+            destination: "transition/transition.css",
+            format: "css/variables",
+            filter: { $type: "transition" },
+          },
+          {
+            destination: "border/border.css",
+            format: "css/variables",
+            filter: { $type: "border" },
+          },
+          {
+            destination: "shadow/shadow.css",
+            format: "css/variables",
+            filter: { $type: "shadow" },
+          },
+          {
+            destination: "number/number.css",
             format: "css/variables",
             filter: { $type: "number" },
           },
@@ -378,12 +672,11 @@ function getStyleDictionaryConfig(brand, platform) {
         buildPath: `build/web/${brand}/css/`,
         files: [
           {
-            destination: "variables/tokens-rgb.css",
+            destination: "all/all-rgb.css",
             format: "css/variables",
           },
-
           {
-            destination: "variables/tokens-color-rgb.css",
+            destination: "color/colors-rgb.css",
             format: "css/variables",
             filter: { $type: "color" },
           },
@@ -396,12 +689,11 @@ function getStyleDictionaryConfig(brand, platform) {
         buildPath: `build/web/${brand}/css/`,
         files: [
           {
-            destination: "variables/tokens-hsl.css",
+            destination: "all/all-hsl.css",
             format: "css/variables",
           },
-
           {
-            destination: "variables/tokens-color-hsl.css",
+            destination: "color/colors-hsl.css",
             format: "css/variables",
             filter: { $type: "color" },
           },
@@ -414,25 +706,63 @@ function getStyleDictionaryConfig(brand, platform) {
         buildPath: `build/web/${brand}/css/`,
         files: [
           {
-            destination: "variables/tokens-rem.css",
+            destination: "all/all-rem.css",
             format: "css/variables",
           },
-
           {
-            destination: "variables/tokens-dimension-rem.css",
+            destination: "dimension/dimensions-rem.css",
             format: "css/variables",
-            filter: { $type: "dimension" }
+            filter: { $type: "dimension" },
           },
           {
-            destination: "variables/tokens-typography-rem.css",
+            destination: "typography/typography-rem.css",
             format: "css/variables",
             filter: { $type: "typography" },
+          },
+          {
+            destination: "typography/fontSize-rem.css",
+            format: "css/variables",
+            filter: { $type: "fontSize" },
+          },
+          {
+            destination: "border/border-rem.css",
+            format: "css/variables",
+            filter: { $type: "border" },
+          },
+          {
+            destination: "shadow/shadow-rem.css",
+            format: "css/variables",
+            filter: { $type: "shadow" },
+          },
+        ],
+      },
+
+      // CSS - RGB/REM
+      "custom/css/rgb/rem": {
+        transformGroup: "css-group-rgb-rem",
+        buildPath: `build/web/${brand}/css/`,
+        files: [
+          {
+            destination: "all/all-rgb-rem.css",
+            format: "css/variables",
+          },
+        ],
+      },
+
+      // CSS - HSL/REM
+      "custom/css/hsl/rem": {
+        transformGroup: "css-group-hsl-rem",
+        buildPath: `build/web/${brand}/css/`,
+        files: [
+          {
+            destination: "all/all-hsl-rem.css",
+            format: "css/variables",
           },
         ],
       },
 
       // SCSS
-      'custom/scss': {
+      "custom/scss": {
         transformGroup: "scss-group",
         buildPath: `build/web/${brand}/scss/`,
         files: [
@@ -448,7 +778,7 @@ function getStyleDictionaryConfig(brand, platform) {
       },
 
       // JSON
-      'custom/json': {
+      "custom/json": {
         transformGroup: "json-group",
         buildPath: `build/web/${brand}/json/`,
         files: [
@@ -475,9 +805,16 @@ console.log("Build started...");
 ["brand-1"].map(function (brand) {
   [
     "custom/web",
+    "custom/web/rgb",
+    "custom/web/hsl",
+    "custom/web/rgb/rem",
+    "custom/web/hsl/rem",
+    "custom/web/rem",
     "custom/css",
     "custom/css/rgb",
     "custom/css/hsl",
+    "custom/css/rgb/rem",
+    "custom/css/hsl/rem",
     "custom/css/rem",
     "custom/scss",
     "custom/json",

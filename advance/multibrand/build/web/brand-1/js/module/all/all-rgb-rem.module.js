@@ -1,8 +1,12 @@
-{
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+module.exports = {
   "base": {
     "red": {
       "100": {
-        "$value": "#fff5f5",
+        "$value": "rgb(255, 245, 245)",
         "filePath": "tokens/brands/brand-1/base.json5",
         "isSource": true,
         "$type": "color",
@@ -10,7 +14,7 @@
           "$value": "#fff5f5",
           "$type": "color"
         },
-        "name": "base-red-100",
+        "name": "baseRed100",
         "attributes": {
           "category": "base",
           "type": "red",
@@ -23,7 +27,7 @@
         ]
       },
       "200": {
-        "$value": "#fed7d7",
+        "$value": "rgb(254, 215, 215)",
         "filePath": "tokens/brands/brand-1/base.json5",
         "isSource": true,
         "$type": "color",
@@ -31,7 +35,7 @@
           "$value": "#fed7d7",
           "$type": "color"
         },
-        "name": "base-red-200",
+        "name": "baseRed200",
         "attributes": {
           "category": "base",
           "type": "red",
@@ -44,7 +48,7 @@
         ]
       },
       "300": {
-        "$value": "#feb2b2",
+        "$value": "rgb(254, 178, 178)",
         "filePath": "tokens/brands/brand-1/base.json5",
         "isSource": true,
         "$type": "color",
@@ -52,7 +56,7 @@
           "$value": "#feb2b2",
           "$type": "color"
         },
-        "name": "base-red-300",
+        "name": "baseRed300",
         "attributes": {
           "category": "base",
           "type": "red",
@@ -65,7 +69,7 @@
         ]
       },
       "400": {
-        "$value": "#fc8181",
+        "$value": "rgb(252, 129, 129)",
         "filePath": "tokens/brands/brand-1/base.json5",
         "isSource": true,
         "$type": "color",
@@ -73,7 +77,7 @@
           "$value": "#fc8181",
           "$type": "color"
         },
-        "name": "base-red-400",
+        "name": "baseRed400",
         "attributes": {
           "category": "base",
           "type": "red",
@@ -86,7 +90,7 @@
         ]
       },
       "500": {
-        "$value": "#f56565",
+        "$value": "rgb(245, 101, 101)",
         "filePath": "tokens/brands/brand-1/base.json5",
         "isSource": true,
         "$type": "color",
@@ -94,7 +98,7 @@
           "$value": "#f56565",
           "$type": "color"
         },
-        "name": "base-red-500",
+        "name": "baseRed500",
         "attributes": {
           "category": "base",
           "type": "red",
@@ -107,7 +111,7 @@
         ]
       },
       "600": {
-        "$value": "#e53e3e",
+        "$value": "rgb(229, 62, 62)",
         "filePath": "tokens/brands/brand-1/base.json5",
         "isSource": true,
         "$type": "color",
@@ -115,7 +119,7 @@
           "$value": "#e53e3e",
           "$type": "color"
         },
-        "name": "base-red-600",
+        "name": "baseRed600",
         "attributes": {
           "category": "base",
           "type": "red",
@@ -128,7 +132,7 @@
         ]
       },
       "700": {
-        "$value": "#c53030",
+        "$value": "rgb(197, 48, 48)",
         "filePath": "tokens/brands/brand-1/base.json5",
         "isSource": true,
         "$type": "color",
@@ -136,7 +140,7 @@
           "$value": "#c53030",
           "$type": "color"
         },
-        "name": "base-red-700",
+        "name": "baseRed700",
         "attributes": {
           "category": "base",
           "type": "red",
@@ -149,7 +153,7 @@
         ]
       },
       "800": {
-        "$value": "#9b2c2c",
+        "$value": "rgb(155, 44, 44)",
         "filePath": "tokens/brands/brand-1/base.json5",
         "isSource": true,
         "$type": "color",
@@ -157,7 +161,7 @@
           "$value": "#9b2c2c",
           "$type": "color"
         },
-        "name": "base-red-800",
+        "name": "baseRed800",
         "attributes": {
           "category": "base",
           "type": "red",
@@ -173,7 +177,7 @@
   },
   "colors": {
     "black": {
-      "$value": "#000000",
+      "$value": "rgb(0, 0, 0)",
       "filePath": "tokens/brands/brand-1/colors.json",
       "isSource": true,
       "$type": "color",
@@ -181,7 +185,7 @@
         "$value": "#000000",
         "$type": "color"
       },
-      "name": "colors-black",
+      "name": "colorsBlack",
       "attributes": {
         "category": "colors",
         "type": "black"
@@ -192,7 +196,7 @@
       ]
     },
     "white": {
-      "$value": "#ffffff",
+      "$value": "rgb(255, 255, 255)",
       "filePath": "tokens/brands/brand-1/colors.json",
       "isSource": true,
       "$type": "color",
@@ -200,7 +204,7 @@
         "$value": "#ffffff",
         "$type": "color"
       },
-      "name": "colors-white",
+      "name": "colorsWhite",
       "attributes": {
         "category": "colors",
         "type": "white"
@@ -212,7 +216,7 @@
     },
     "orange": {
       "100": {
-        "$value": "#fffaf0",
+        "$value": "rgb(255, 250, 240)",
         "filePath": "tokens/brands/brand-1/colors.json",
         "isSource": true,
         "$type": "color",
@@ -220,7 +224,7 @@
           "$value": "#fffaf0",
           "$type": "color"
         },
-        "name": "colors-orange-100",
+        "name": "colorsOrange100",
         "attributes": {
           "category": "colors",
           "type": "orange",
@@ -233,7 +237,7 @@
         ]
       },
       "200": {
-        "$value": "#feebc8",
+        "$value": "rgb(254, 235, 200)",
         "filePath": "tokens/brands/brand-1/colors.json",
         "isSource": true,
         "$type": "color",
@@ -241,7 +245,7 @@
           "$value": "#feebc8",
           "$type": "color"
         },
-        "name": "colors-orange-200",
+        "name": "colorsOrange200",
         "attributes": {
           "category": "colors",
           "type": "orange",
@@ -254,7 +258,7 @@
         ]
       },
       "300": {
-        "$value": "#fbd38d",
+        "$value": "rgb(251, 211, 141)",
         "filePath": "tokens/brands/brand-1/colors.json",
         "isSource": true,
         "$type": "color",
@@ -262,7 +266,7 @@
           "$value": "#fbd38d",
           "$type": "color"
         },
-        "name": "colors-orange-300",
+        "name": "colorsOrange300",
         "attributes": {
           "category": "colors",
           "type": "orange",
@@ -275,7 +279,7 @@
         ]
       },
       "400": {
-        "$value": "#f6ad55",
+        "$value": "rgb(246, 173, 85)",
         "filePath": "tokens/brands/brand-1/colors.json",
         "isSource": true,
         "$type": "color",
@@ -283,7 +287,7 @@
           "$value": "#f6ad55",
           "$type": "color"
         },
-        "name": "colors-orange-400",
+        "name": "colorsOrange400",
         "attributes": {
           "category": "colors",
           "type": "orange",
@@ -296,7 +300,7 @@
         ]
       },
       "500": {
-        "$value": "#ed8936",
+        "$value": "rgb(237, 137, 54)",
         "filePath": "tokens/brands/brand-1/colors.json",
         "isSource": true,
         "$type": "color",
@@ -304,7 +308,7 @@
           "$value": "#ed8936",
           "$type": "color"
         },
-        "name": "colors-orange-500",
+        "name": "colorsOrange500",
         "attributes": {
           "category": "colors",
           "type": "orange",
@@ -317,7 +321,7 @@
         ]
       },
       "600": {
-        "$value": "#dd6b20",
+        "$value": "rgb(221, 107, 32)",
         "filePath": "tokens/brands/brand-1/colors.json",
         "isSource": true,
         "$type": "color",
@@ -325,7 +329,7 @@
           "$value": "#dd6b20",
           "$type": "color"
         },
-        "name": "colors-orange-600",
+        "name": "colorsOrange600",
         "attributes": {
           "category": "colors",
           "type": "orange",
@@ -338,7 +342,7 @@
         ]
       },
       "700": {
-        "$value": "#c05621",
+        "$value": "rgb(192, 86, 33)",
         "filePath": "tokens/brands/brand-1/colors.json",
         "isSource": true,
         "$type": "color",
@@ -346,7 +350,7 @@
           "$value": "#c05621",
           "$type": "color"
         },
-        "name": "colors-orange-700",
+        "name": "colorsOrange700",
         "attributes": {
           "category": "colors",
           "type": "orange",
@@ -359,7 +363,7 @@
         ]
       },
       "800": {
-        "$value": "#9c4221",
+        "$value": "rgb(156, 66, 33)",
         "filePath": "tokens/brands/brand-1/colors.json",
         "isSource": true,
         "$type": "color",
@@ -367,7 +371,7 @@
           "$value": "#9c4221",
           "$type": "color"
         },
-        "name": "colors-orange-800",
+        "name": "colorsOrange800",
         "attributes": {
           "category": "colors",
           "type": "orange",
@@ -380,7 +384,7 @@
         ]
       },
       "900": {
-        "$value": "#7b341e",
+        "$value": "rgb(123, 52, 30)",
         "filePath": "tokens/brands/brand-1/colors.json",
         "isSource": true,
         "$type": "color",
@@ -388,7 +392,7 @@
           "$value": "#7b341e",
           "$type": "color"
         },
-        "name": "colors-orange-900",
+        "name": "colorsOrange900",
         "attributes": {
           "category": "colors",
           "type": "orange",
@@ -404,7 +408,7 @@
   },
   "dimensions": {
     "0": {
-      "$value": "0px",
+      "$value": "0",
       "category": "base",
       "attributes": {
         "unit": "px",
@@ -422,14 +426,14 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-0",
+      "name": "dimensions0",
       "path": [
         "dimensions",
         "0"
       ]
     },
     "1": {
-      "$value": "4px",
+      "$value": "0.25rem",
       "category": "base",
       "attributes": {
         "unit": "px",
@@ -447,14 +451,14 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-1",
+      "name": "dimensions1",
       "path": [
         "dimensions",
         "1"
       ]
     },
     "2": {
-      "$value": "8px",
+      "$value": "0.5rem",
       "category": "base",
       "attributes": {
         "unit": "px",
@@ -472,14 +476,14 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-2",
+      "name": "dimensions2",
       "path": [
         "dimensions",
         "2"
       ]
     },
     "3": {
-      "$value": "12px",
+      "$value": "0.75rem",
       "category": "base",
       "attributes": {
         "unit": "px",
@@ -497,14 +501,14 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-3",
+      "name": "dimensions3",
       "path": [
         "dimensions",
         "3"
       ]
     },
     "4": {
-      "$value": "16px",
+      "$value": "1rem",
       "category": "base",
       "attributes": {
         "unit": "px",
@@ -522,14 +526,14 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-4",
+      "name": "dimensions4",
       "path": [
         "dimensions",
         "4"
       ]
     },
     "5": {
-      "$value": "20px",
+      "$value": "1.25rem",
       "category": "base",
       "attributes": {
         "unit": "px",
@@ -547,14 +551,14 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-5",
+      "name": "dimensions5",
       "path": [
         "dimensions",
         "5"
       ]
     },
     "6": {
-      "$value": "24px",
+      "$value": "1.5rem",
       "category": "base",
       "attributes": {
         "unit": "px",
@@ -572,14 +576,14 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-6",
+      "name": "dimensions6",
       "path": [
         "dimensions",
         "6"
       ]
     },
     "7": {
-      "$value": "28px",
+      "$value": "1.75rem",
       "category": "base",
       "attributes": {
         "unit": "px",
@@ -597,14 +601,14 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-7",
+      "name": "dimensions7",
       "path": [
         "dimensions",
         "7"
       ]
     },
     "8": {
-      "$value": "32px",
+      "$value": "2rem",
       "category": "base",
       "attributes": {
         "unit": "px",
@@ -622,14 +626,14 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-8",
+      "name": "dimensions8",
       "path": [
         "dimensions",
         "8"
       ]
     },
     "9": {
-      "$value": "36px",
+      "$value": "2.25rem",
       "category": "base",
       "attributes": {
         "unit": "px",
@@ -647,14 +651,14 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-9",
+      "name": "dimensions9",
       "path": [
         "dimensions",
         "9"
       ]
     },
     "10": {
-      "$value": "40px",
+      "$value": "2.5rem",
       "category": "base",
       "attributes": {
         "unit": "px",
@@ -672,14 +676,14 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-10",
+      "name": "dimensions10",
       "path": [
         "dimensions",
         "10"
       ]
     },
     "11": {
-      "$value": "44px",
+      "$value": "2.75rem",
       "category": "base",
       "attributes": {
         "unit": "px",
@@ -697,14 +701,14 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-11",
+      "name": "dimensions11",
       "path": [
         "dimensions",
         "11"
       ]
     },
     "12": {
-      "$value": "48px",
+      "$value": "3rem",
       "category": "base",
       "attributes": {
         "unit": "px",
@@ -722,14 +726,14 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-12",
+      "name": "dimensions12",
       "path": [
         "dimensions",
         "12"
       ]
     },
     "13": {
-      "$value": "52px",
+      "$value": "3.25rem",
       "category": "base",
       "attributes": {
         "unit": "px",
@@ -747,14 +751,14 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-13",
+      "name": "dimensions13",
       "path": [
         "dimensions",
         "13"
       ]
     },
     "14": {
-      "$value": "56px",
+      "$value": "3.5rem",
       "category": "base",
       "attributes": {
         "unit": "px",
@@ -772,14 +776,14 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-14",
+      "name": "dimensions14",
       "path": [
         "dimensions",
         "14"
       ]
     },
     "15": {
-      "$value": "60px",
+      "$value": "3.75rem",
       "category": "base",
       "attributes": {
         "unit": "px",
@@ -797,14 +801,14 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-15",
+      "name": "dimensions15",
       "path": [
         "dimensions",
         "15"
       ]
     },
     "max": {
-      "$value": "9999px",
+      "$value": "624.9375rem",
       "category": "base",
       "attributes": {
         "unit": "px",
@@ -822,7 +826,7 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-max",
+      "name": "dimensionsMax",
       "path": [
         "dimensions",
         "max"
@@ -835,7 +839,7 @@
         "$value": {
           "fontFamily": "Open Sans, sans-serif",
           "fontWeight": "extra-bold",
-          "fontSize": "28px",
+          "fontSize": "1.75rem",
           "lineHeight": 1.8
         },
         "filePath": "tokens/brands/brand-1/text.json",
@@ -850,7 +854,7 @@
           },
           "$type": "typography"
         },
-        "name": "text-typography-heading",
+        "name": "textTypographyHeading",
         "attributes": {
           "category": "text",
           "type": "typography",
@@ -866,7 +870,7 @@
         "$value": {
           "fontFamily": "Times New Roman, serif",
           "fontWeight": "regular",
-          "fontSize": "16px",
+          "fontSize": "1rem",
           "lineHeight": 1.2
         },
         "filePath": "tokens/brands/brand-1/text.json",
@@ -881,7 +885,7 @@
           },
           "$type": "typography"
         },
-        "name": "text-typography-body",
+        "name": "textTypographyBody",
         "attributes": {
           "category": "text",
           "type": "typography",
@@ -904,7 +908,7 @@
           "$value": "Times New Roman, serif",
           "$type": "fontFamily"
         },
-        "name": "text-fonts-serif",
+        "name": "textFontsSerif",
         "attributes": {
           "category": "text",
           "type": "fonts",
@@ -925,7 +929,7 @@
           "$value": "Open Sans, sans-serif",
           "$type": "fontFamily"
         },
-        "name": "text-fonts-sans",
+        "name": "textFontsSans",
         "attributes": {
           "category": "text",
           "type": "fonts",
@@ -940,7 +944,7 @@
     },
     "sizes": {
       "heading": {
-        "$value": "28px",
+        "$value": "1.75rem",
         "filePath": "tokens/brands/brand-1/text.json",
         "isSource": true,
         "$type": "fontSize",
@@ -948,7 +952,7 @@
           "$value": "{dimensions.7}",
           "$type": "fontSize"
         },
-        "name": "text-sizes-heading",
+        "name": "textSizesHeading",
         "attributes": {
           "category": "text",
           "type": "sizes",
@@ -961,7 +965,7 @@
         ]
       },
       "body": {
-        "$value": "16px",
+        "$value": "1rem",
         "filePath": "tokens/brands/brand-1/text.json",
         "isSource": true,
         "$type": "fontSize",
@@ -969,7 +973,7 @@
           "$value": "{dimensions.4}",
           "$type": "fontSize"
         },
-        "name": "text-sizes-body",
+        "name": "textSizesBody",
         "attributes": {
           "category": "text",
           "type": "sizes",
@@ -992,7 +996,7 @@
           "$value": "thin",
           "$type": "fontWeight"
         },
-        "name": "text-weights-light",
+        "name": "textWeightsLight",
         "attributes": {
           "category": "text",
           "type": "weights",
@@ -1013,7 +1017,7 @@
           "$value": "regular",
           "$type": "fontWeight"
         },
-        "name": "text-weights-regular",
+        "name": "textWeightsRegular",
         "attributes": {
           "category": "text",
           "type": "weights",
@@ -1034,7 +1038,7 @@
           "$value": "extra-bold",
           "$type": "fontWeight"
         },
-        "name": "text-weights-bold",
+        "name": "textWeightsBold",
         "attributes": {
           "category": "text",
           "type": "weights",
@@ -1057,7 +1061,7 @@
           "$value": 1.2,
           "$type": "number"
         },
-        "name": "text-line-heights-normal",
+        "name": "textLineHeightsNormal",
         "attributes": {
           "category": "text",
           "type": "lineHeights",
@@ -1078,7 +1082,7 @@
           "$value": 1.8,
           "$type": "number"
         },
-        "name": "text-line-heights-large",
+        "name": "textLineHeightsLarge",
         "attributes": {
           "category": "text",
           "type": "lineHeights",
@@ -1115,7 +1119,7 @@
         },
         "$type": "transition"
       },
-      "name": "transitions-emphasis",
+      "name": "transitionsEmphasis",
       "attributes": {
         "category": "transitions",
         "type": "emphasis"
@@ -1147,7 +1151,7 @@
         },
         "$type": "transition"
       },
-      "name": "transitions-fade",
+      "name": "transitionsFade",
       "attributes": {
         "category": "transitions",
         "type": "fade"
@@ -1177,7 +1181,7 @@
           ],
           "$type": "cubicBezier"
         },
-        "name": "transitions-easing-functions-accelerate",
+        "name": "transitionsEasingFunctionsAccelerate",
         "attributes": {
           "category": "transitions",
           "type": "easingFunctions",
@@ -1208,7 +1212,7 @@
           ],
           "$type": "cubicBezier"
         },
-        "name": "transitions-easing-functions-decelerate",
+        "name": "transitionsEasingFunctionsDecelerate",
         "attributes": {
           "category": "transitions",
           "type": "easingFunctions",
@@ -1231,7 +1235,7 @@
           "$value": "0ms",
           "$type": "duration"
         },
-        "name": "transitions-durations-instant",
+        "name": "transitionsDurationsInstant",
         "attributes": {
           "category": "transitions",
           "type": "durations",
@@ -1252,7 +1256,7 @@
           "$value": "100ms",
           "$type": "duration"
         },
-        "name": "transitions-durations-short",
+        "name": "transitionsDurationsShort",
         "attributes": {
           "category": "transitions",
           "type": "durations",
@@ -1273,7 +1277,7 @@
           "$value": "300ms",
           "$type": "duration"
         },
-        "name": "transitions-durations-medium",
+        "name": "transitionsDurationsMedium",
         "attributes": {
           "category": "transitions",
           "type": "durations",
@@ -1294,7 +1298,7 @@
           "$value": "600ms",
           "$type": "duration"
         },
-        "name": "transitions-durations-long",
+        "name": "transitionsDurationsLong",
         "attributes": {
           "category": "transitions",
           "type": "durations",
@@ -1311,8 +1315,8 @@
   "borders": {
     "heavy": {
       "$value": {
-        "color": "#000000",
-        "width": "4px",
+        "color": "rgb(0, 0, 0)",
+        "width": "0.25rem",
         "style": "solid"
       },
       "filePath": "tokens/brands/brand-1/object-values.json",
@@ -1326,7 +1330,7 @@
         },
         "$type": "border"
       },
-      "name": "borders-heavy",
+      "name": "bordersHeavy",
       "attributes": {
         "category": "borders",
         "type": "heavy"
@@ -1338,8 +1342,8 @@
     },
     "wireframe": {
       "$value": {
-        "color": "#dd6b20",
-        "width": "8px",
+        "color": "rgb(221, 107, 32)",
+        "width": "0.5rem",
         "style": {
           "dashArray": [
             "0.5rem",
@@ -1359,7 +1363,7 @@
         },
         "$type": "border"
       },
-      "name": "borders-wireframe",
+      "name": "bordersWireframe",
       "attributes": {
         "category": "borders",
         "type": "wireframe"
@@ -1379,7 +1383,7 @@
           "$value": "solid",
           "$type": "strokeStyle"
         },
-        "name": "borders-styles-solid",
+        "name": "bordersStylesSolid",
         "attributes": {
           "category": "borders",
           "type": "styles",
@@ -1412,7 +1416,7 @@
           },
           "$type": "strokeStyle"
         },
-        "name": "borders-styles-dashed",
+        "name": "bordersStylesDashed",
         "attributes": {
           "category": "borders",
           "type": "styles",
@@ -1429,10 +1433,10 @@
   "shadows": {
     "sm": {
       "$value": {
-        "color": "#000000",
-        "offsetX": "0px",
-        "offsetY": "4px",
-        "blur": "12px"
+        "color": "rgb(0, 0, 0)",
+        "offsetX": "0",
+        "offsetY": "0.25rem",
+        "blur": "0.75rem"
       },
       "filePath": "tokens/brands/brand-1/object-values.json",
       "isSource": true,
@@ -1446,7 +1450,7 @@
         },
         "$type": "shadow"
       },
-      "name": "shadows-sm",
+      "name": "shadowsSm",
       "attributes": {
         "category": "shadows",
         "type": "sm"
@@ -1458,10 +1462,10 @@
     },
     "lg": {
       "$value": {
-        "color": "#000000",
-        "offsetX": "0px",
-        "offsetY": "8px",
-        "blur": "16px"
+        "color": "rgb(0, 0, 0)",
+        "offsetX": "0",
+        "offsetY": "0.5rem",
+        "blur": "1rem"
       },
       "filePath": "tokens/brands/brand-1/object-values.json",
       "isSource": true,
@@ -1475,7 +1479,7 @@
         },
         "$type": "shadow"
       },
-      "name": "shadows-lg",
+      "name": "shadowsLg",
       "attributes": {
         "category": "shadows",
         "type": "lg"
@@ -1488,16 +1492,16 @@
     "multi": {
       "$value": [
         {
-          "color": "#000000",
-          "offsetX": "0px",
-          "offsetY": "4px",
-          "blur": "12px"
+          "color": "rgb(0, 0, 0)",
+          "offsetX": "0",
+          "offsetY": "0.25rem",
+          "blur": "0.75rem"
         },
         {
-          "color": "#000000",
-          "offsetX": "0px",
-          "offsetY": "8px",
-          "blur": "16px"
+          "color": "rgb(0, 0, 0)",
+          "offsetX": "0",
+          "offsetY": "0.5rem",
+          "blur": "1rem"
         }
       ],
       "filePath": "tokens/brands/brand-1/object-values.json",
@@ -1510,7 +1514,7 @@
         ],
         "$type": "shadow"
       },
-      "name": "shadows-multi",
+      "name": "shadowsMulti",
       "attributes": {
         "category": "shadows",
         "type": "multi"
@@ -1521,4 +1525,4 @@
       ]
     }
   }
-}
+};

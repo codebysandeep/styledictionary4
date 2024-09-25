@@ -1,4 +1,8 @@
-{
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+module.exports = {
   "base": {
     "red": {
       "100": {
@@ -10,7 +14,7 @@
           "$value": "#fff5f5",
           "$type": "color"
         },
-        "name": "base-red-100",
+        "name": "baseRed100",
         "attributes": {
           "category": "base",
           "type": "red",
@@ -31,7 +35,7 @@
           "$value": "#fed7d7",
           "$type": "color"
         },
-        "name": "base-red-200",
+        "name": "baseRed200",
         "attributes": {
           "category": "base",
           "type": "red",
@@ -52,7 +56,7 @@
           "$value": "#feb2b2",
           "$type": "color"
         },
-        "name": "base-red-300",
+        "name": "baseRed300",
         "attributes": {
           "category": "base",
           "type": "red",
@@ -73,7 +77,7 @@
           "$value": "#fc8181",
           "$type": "color"
         },
-        "name": "base-red-400",
+        "name": "baseRed400",
         "attributes": {
           "category": "base",
           "type": "red",
@@ -94,7 +98,7 @@
           "$value": "#f56565",
           "$type": "color"
         },
-        "name": "base-red-500",
+        "name": "baseRed500",
         "attributes": {
           "category": "base",
           "type": "red",
@@ -115,7 +119,7 @@
           "$value": "#e53e3e",
           "$type": "color"
         },
-        "name": "base-red-600",
+        "name": "baseRed600",
         "attributes": {
           "category": "base",
           "type": "red",
@@ -136,7 +140,7 @@
           "$value": "#c53030",
           "$type": "color"
         },
-        "name": "base-red-700",
+        "name": "baseRed700",
         "attributes": {
           "category": "base",
           "type": "red",
@@ -157,7 +161,7 @@
           "$value": "#9b2c2c",
           "$type": "color"
         },
-        "name": "base-red-800",
+        "name": "baseRed800",
         "attributes": {
           "category": "base",
           "type": "red",
@@ -181,7 +185,7 @@
         "$value": "#000000",
         "$type": "color"
       },
-      "name": "colors-black",
+      "name": "colorsBlack",
       "attributes": {
         "category": "colors",
         "type": "black"
@@ -200,7 +204,7 @@
         "$value": "#ffffff",
         "$type": "color"
       },
-      "name": "colors-white",
+      "name": "colorsWhite",
       "attributes": {
         "category": "colors",
         "type": "white"
@@ -220,7 +224,7 @@
           "$value": "#fffaf0",
           "$type": "color"
         },
-        "name": "colors-orange-100",
+        "name": "colorsOrange100",
         "attributes": {
           "category": "colors",
           "type": "orange",
@@ -241,7 +245,7 @@
           "$value": "#feebc8",
           "$type": "color"
         },
-        "name": "colors-orange-200",
+        "name": "colorsOrange200",
         "attributes": {
           "category": "colors",
           "type": "orange",
@@ -262,7 +266,7 @@
           "$value": "#fbd38d",
           "$type": "color"
         },
-        "name": "colors-orange-300",
+        "name": "colorsOrange300",
         "attributes": {
           "category": "colors",
           "type": "orange",
@@ -283,7 +287,7 @@
           "$value": "#f6ad55",
           "$type": "color"
         },
-        "name": "colors-orange-400",
+        "name": "colorsOrange400",
         "attributes": {
           "category": "colors",
           "type": "orange",
@@ -304,7 +308,7 @@
           "$value": "#ed8936",
           "$type": "color"
         },
-        "name": "colors-orange-500",
+        "name": "colorsOrange500",
         "attributes": {
           "category": "colors",
           "type": "orange",
@@ -325,7 +329,7 @@
           "$value": "#dd6b20",
           "$type": "color"
         },
-        "name": "colors-orange-600",
+        "name": "colorsOrange600",
         "attributes": {
           "category": "colors",
           "type": "orange",
@@ -346,7 +350,7 @@
           "$value": "#c05621",
           "$type": "color"
         },
-        "name": "colors-orange-700",
+        "name": "colorsOrange700",
         "attributes": {
           "category": "colors",
           "type": "orange",
@@ -367,7 +371,7 @@
           "$value": "#9c4221",
           "$type": "color"
         },
-        "name": "colors-orange-800",
+        "name": "colorsOrange800",
         "attributes": {
           "category": "colors",
           "type": "orange",
@@ -388,7 +392,7 @@
           "$value": "#7b341e",
           "$type": "color"
         },
-        "name": "colors-orange-900",
+        "name": "colorsOrange900",
         "attributes": {
           "category": "colors",
           "type": "orange",
@@ -422,7 +426,7 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-0",
+      "name": "dimensions0",
       "path": [
         "dimensions",
         "0"
@@ -447,7 +451,7 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-1",
+      "name": "dimensions1",
       "path": [
         "dimensions",
         "1"
@@ -472,7 +476,7 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-2",
+      "name": "dimensions2",
       "path": [
         "dimensions",
         "2"
@@ -497,7 +501,7 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-3",
+      "name": "dimensions3",
       "path": [
         "dimensions",
         "3"
@@ -522,7 +526,7 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-4",
+      "name": "dimensions4",
       "path": [
         "dimensions",
         "4"
@@ -547,7 +551,7 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-5",
+      "name": "dimensions5",
       "path": [
         "dimensions",
         "5"
@@ -572,7 +576,7 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-6",
+      "name": "dimensions6",
       "path": [
         "dimensions",
         "6"
@@ -597,7 +601,7 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-7",
+      "name": "dimensions7",
       "path": [
         "dimensions",
         "7"
@@ -622,7 +626,7 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-8",
+      "name": "dimensions8",
       "path": [
         "dimensions",
         "8"
@@ -647,7 +651,7 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-9",
+      "name": "dimensions9",
       "path": [
         "dimensions",
         "9"
@@ -672,7 +676,7 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-10",
+      "name": "dimensions10",
       "path": [
         "dimensions",
         "10"
@@ -697,7 +701,7 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-11",
+      "name": "dimensions11",
       "path": [
         "dimensions",
         "11"
@@ -722,7 +726,7 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-12",
+      "name": "dimensions12",
       "path": [
         "dimensions",
         "12"
@@ -747,7 +751,7 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-13",
+      "name": "dimensions13",
       "path": [
         "dimensions",
         "13"
@@ -772,7 +776,7 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-14",
+      "name": "dimensions14",
       "path": [
         "dimensions",
         "14"
@@ -797,7 +801,7 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-15",
+      "name": "dimensions15",
       "path": [
         "dimensions",
         "15"
@@ -822,7 +826,7 @@
         },
         "$type": "dimension"
       },
-      "name": "dimensions-max",
+      "name": "dimensionsMax",
       "path": [
         "dimensions",
         "max"
@@ -850,7 +854,7 @@
           },
           "$type": "typography"
         },
-        "name": "text-typography-heading",
+        "name": "textTypographyHeading",
         "attributes": {
           "category": "text",
           "type": "typography",
@@ -881,7 +885,7 @@
           },
           "$type": "typography"
         },
-        "name": "text-typography-body",
+        "name": "textTypographyBody",
         "attributes": {
           "category": "text",
           "type": "typography",
@@ -904,7 +908,7 @@
           "$value": "Times New Roman, serif",
           "$type": "fontFamily"
         },
-        "name": "text-fonts-serif",
+        "name": "textFontsSerif",
         "attributes": {
           "category": "text",
           "type": "fonts",
@@ -925,7 +929,7 @@
           "$value": "Open Sans, sans-serif",
           "$type": "fontFamily"
         },
-        "name": "text-fonts-sans",
+        "name": "textFontsSans",
         "attributes": {
           "category": "text",
           "type": "fonts",
@@ -948,7 +952,7 @@
           "$value": "{dimensions.7}",
           "$type": "fontSize"
         },
-        "name": "text-sizes-heading",
+        "name": "textSizesHeading",
         "attributes": {
           "category": "text",
           "type": "sizes",
@@ -969,7 +973,7 @@
           "$value": "{dimensions.4}",
           "$type": "fontSize"
         },
-        "name": "text-sizes-body",
+        "name": "textSizesBody",
         "attributes": {
           "category": "text",
           "type": "sizes",
@@ -992,7 +996,7 @@
           "$value": "thin",
           "$type": "fontWeight"
         },
-        "name": "text-weights-light",
+        "name": "textWeightsLight",
         "attributes": {
           "category": "text",
           "type": "weights",
@@ -1013,7 +1017,7 @@
           "$value": "regular",
           "$type": "fontWeight"
         },
-        "name": "text-weights-regular",
+        "name": "textWeightsRegular",
         "attributes": {
           "category": "text",
           "type": "weights",
@@ -1034,7 +1038,7 @@
           "$value": "extra-bold",
           "$type": "fontWeight"
         },
-        "name": "text-weights-bold",
+        "name": "textWeightsBold",
         "attributes": {
           "category": "text",
           "type": "weights",
@@ -1057,7 +1061,7 @@
           "$value": 1.2,
           "$type": "number"
         },
-        "name": "text-line-heights-normal",
+        "name": "textLineHeightsNormal",
         "attributes": {
           "category": "text",
           "type": "lineHeights",
@@ -1078,7 +1082,7 @@
           "$value": 1.8,
           "$type": "number"
         },
-        "name": "text-line-heights-large",
+        "name": "textLineHeightsLarge",
         "attributes": {
           "category": "text",
           "type": "lineHeights",
@@ -1115,7 +1119,7 @@
         },
         "$type": "transition"
       },
-      "name": "transitions-emphasis",
+      "name": "transitionsEmphasis",
       "attributes": {
         "category": "transitions",
         "type": "emphasis"
@@ -1147,7 +1151,7 @@
         },
         "$type": "transition"
       },
-      "name": "transitions-fade",
+      "name": "transitionsFade",
       "attributes": {
         "category": "transitions",
         "type": "fade"
@@ -1177,7 +1181,7 @@
           ],
           "$type": "cubicBezier"
         },
-        "name": "transitions-easing-functions-accelerate",
+        "name": "transitionsEasingFunctionsAccelerate",
         "attributes": {
           "category": "transitions",
           "type": "easingFunctions",
@@ -1208,7 +1212,7 @@
           ],
           "$type": "cubicBezier"
         },
-        "name": "transitions-easing-functions-decelerate",
+        "name": "transitionsEasingFunctionsDecelerate",
         "attributes": {
           "category": "transitions",
           "type": "easingFunctions",
@@ -1231,7 +1235,7 @@
           "$value": "0ms",
           "$type": "duration"
         },
-        "name": "transitions-durations-instant",
+        "name": "transitionsDurationsInstant",
         "attributes": {
           "category": "transitions",
           "type": "durations",
@@ -1252,7 +1256,7 @@
           "$value": "100ms",
           "$type": "duration"
         },
-        "name": "transitions-durations-short",
+        "name": "transitionsDurationsShort",
         "attributes": {
           "category": "transitions",
           "type": "durations",
@@ -1273,7 +1277,7 @@
           "$value": "300ms",
           "$type": "duration"
         },
-        "name": "transitions-durations-medium",
+        "name": "transitionsDurationsMedium",
         "attributes": {
           "category": "transitions",
           "type": "durations",
@@ -1294,7 +1298,7 @@
           "$value": "600ms",
           "$type": "duration"
         },
-        "name": "transitions-durations-long",
+        "name": "transitionsDurationsLong",
         "attributes": {
           "category": "transitions",
           "type": "durations",
@@ -1326,7 +1330,7 @@
         },
         "$type": "border"
       },
-      "name": "borders-heavy",
+      "name": "bordersHeavy",
       "attributes": {
         "category": "borders",
         "type": "heavy"
@@ -1359,7 +1363,7 @@
         },
         "$type": "border"
       },
-      "name": "borders-wireframe",
+      "name": "bordersWireframe",
       "attributes": {
         "category": "borders",
         "type": "wireframe"
@@ -1379,7 +1383,7 @@
           "$value": "solid",
           "$type": "strokeStyle"
         },
-        "name": "borders-styles-solid",
+        "name": "bordersStylesSolid",
         "attributes": {
           "category": "borders",
           "type": "styles",
@@ -1412,7 +1416,7 @@
           },
           "$type": "strokeStyle"
         },
-        "name": "borders-styles-dashed",
+        "name": "bordersStylesDashed",
         "attributes": {
           "category": "borders",
           "type": "styles",
@@ -1446,7 +1450,7 @@
         },
         "$type": "shadow"
       },
-      "name": "shadows-sm",
+      "name": "shadowsSm",
       "attributes": {
         "category": "shadows",
         "type": "sm"
@@ -1475,7 +1479,7 @@
         },
         "$type": "shadow"
       },
-      "name": "shadows-lg",
+      "name": "shadowsLg",
       "attributes": {
         "category": "shadows",
         "type": "lg"
@@ -1510,7 +1514,7 @@
         ],
         "$type": "shadow"
       },
-      "name": "shadows-multi",
+      "name": "shadowsMulti",
       "attributes": {
         "category": "shadows",
         "type": "multi"
@@ -1521,4 +1525,4 @@
       ]
     }
   }
-}
+};
