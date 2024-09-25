@@ -1,0 +1,9 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --shadows-sm: 0 0.25rem 0.75rem #000000;
+  --shadows-lg: 0 0.5rem 1rem #000000;
+  --shadows-multi: 0 0.25rem 0.75rem #000000, 0 0.5rem 1rem #000000;
+}

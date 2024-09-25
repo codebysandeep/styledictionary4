@@ -1,0 +1,124 @@
+{
+  "dimensions": {
+    "$type": "dimension",
+    "0": {
+      "$value": "0",
+      "category": "base",
+      "attributes": {
+        "unit": "px"
+      }
+    },
+    "1": {
+      "$value": "4",
+      "category": "base",
+      "attributes": {
+        "unit": "px"
+      }
+    },
+    "2": {
+      "$value": "8",
+      "category": "base",
+      "attributes": {
+        "unit": "px"
+      }
+    },
+    "3": {
+      "$value": "12",
+      "category": "base",
+      "attributes": {
+        "unit": "px"
+      }
+    },
+    "4": {
+      "$value": "16",
+      "category": "base",
+      "attributes": {
+        "unit": "px"
+      }
+    },
+    "5": {
+      "$value": "20",
+      "category": "base",
+      "attributes": {
+        "unit": "px"
+      }
+    },
+    "6": {
+      "$value": "24",
+      "category": "base",
+      "attributes": {
+        "unit": "px"
+      }
+    },
+    "7": {
+      "$value": "28",
+      "category": "base",
+      "attributes": {
+        "unit": "px"
+      }
+    },
+    "8": {
+      "$value": "32",
+      "category": "base",
+      "attributes": {
+        "unit": "px"
+      }
+    },
+    "9": {
+      "$value": "36",
+      "category": "base",
+      "attributes": {
+        "unit": "px"
+      }
+    },
+    "10": {
+      "$value": "40",
+      "category": "base",
+      "attributes": {
+        "unit": "px"
+      }
+    },
+    "11": {
+      "$value": "44",
+      "category": "base",
+      "attributes": {
+        "unit": "px"
+      }
+    },
+    "12": {
+      "$value": "48",
+      "category": "base",
+      "attributes": {
+        "unit": "px"
+      }
+    },
+    "13": {
+      "$value": "52",
+      "category": "base",
+      "attributes": {
+        "unit": "px"
+      }
+    },
+    "14": {
+      "$value": "56",
+      "category": "base",
+      "attributes": {
+        "unit": "px"
+      }
+    },
+    "15": {
+      "$value": "60",
+      "category": "base",
+      "attributes": {
+        "unit": "px"
+      }
+    },
+    "max": {
+      "$value": "9999",
+      "category": "base",
+      "attributes": {
+        "unit": "px"
+      }
+    }
+  }
+}
