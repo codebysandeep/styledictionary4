@@ -12,9 +12,11 @@ const generateFiles = (type = "") => {
   console.log(`\nProcessing generateFiles: type:${type}`);
   return [
     // web-group-hex (all tokens with hex color)
-    createFile(`es6/all/all.es6.js`, `javascript/module`),
+    createFile(`es6/all/all.es6.js`, `javascript/es6`),
     // web-group-hex (only color in hex)
-    createFile(`es6/color/colors-hex.js`, `javascript/module`, { $type: "color" }),
+    createFile(`es6/color/colors-hex.js`, `javascript/es6`, { $type: "color" }),
+    createFile(`es6/color/colors-rgb.js`, `javascript/es6`, { $type: "color" }),
+    createFile(`es6/color/colors-hsl.js`, `javascript/es6`, { $type: "color" }),
   ];
 }
 
