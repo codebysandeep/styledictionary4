@@ -1,0 +1,68 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --base-red-100: hsl(0, 100%, 98%);
+  --base-red-200: hsl(0, 95%, 92%);
+  --base-red-300: hsl(0, 97%, 85%);
+  --base-red-400: hsl(0, 95%, 75%);
+  --base-red-500: hsl(0, 88%, 68%);
+  --base-red-600: hsl(0, 76%, 57%);
+  --base-red-700: hsl(0, 61%, 48%);
+  --base-red-800: hsl(0, 56%, 39%);
+  --colors-black: hsl(0, 0%, 0%);
+  --colors-white: hsl(0, 0%, 100%);
+  --colors-orange-100: hsl(40, 100%, 97%);
+  --colors-orange-200: hsl(39, 96%, 89%);
+  --colors-orange-300: hsl(38, 93%, 77%);
+  --colors-orange-400: hsl(33, 90%, 65%);
+  --colors-orange-500: hsl(27, 84%, 57%);
+  --colors-orange-600: hsl(24, 75%, 50%);
+  --colors-orange-700: hsl(20, 71%, 44%);
+  --colors-orange-800: hsl(16, 65%, 37%);
+  --colors-orange-900: hsl(14, 61%, 30%);
+  --dimensions-0: 0;
+  --dimensions-1: 0.25rem;
+  --dimensions-2: 0.5rem;
+  --dimensions-3: 0.75rem;
+  --dimensions-4: 1rem;
+  --dimensions-5: 1.25rem;
+  --dimensions-6: 1.5rem;
+  --dimensions-7: 1.75rem;
+  --dimensions-8: 2rem;
+  --dimensions-9: 2.25rem;
+  --dimensions-10: 2.5rem;
+  --dimensions-11: 2.75rem;
+  --dimensions-12: 3rem;
+  --dimensions-13: 3.25rem;
+  --dimensions-14: 3.5rem;
+  --dimensions-15: 3.75rem;
+  --dimensions-max: 624.9375rem;
+  --text-typography-heading: extra-bold 1.75rem/1.8 'Open Sans', sans-serif;
+  --text-typography-body: regular 1rem/1.2 'Times New Roman', serif;
+  --text-fonts-serif: 'Times New Roman', serif;
+  --text-fonts-sans: 'Open Sans', sans-serif;
+  --text-sizes-heading: 1.75rem;
+  --text-sizes-body: 1rem;
+  --text-weights-light: thin;
+  --text-weights-regular: regular;
+  --text-weights-bold: extra-bold;
+  --text-line-heights-normal: 1.2;
+  --text-line-heights-large: 1.8;
+  --transitions-emphasis: 300ms cubic-bezier(0.5, 0, 1, 1) 0ms;
+  --transitions-fade: 600ms cubic-bezier(0, 0, 0.5, 1) 0ms;
+  --transitions-easing-functions-accelerate: cubic-bezier(0.5, 0, 1, 1);
+  --transitions-easing-functions-decelerate: cubic-bezier(0, 0, 0.5, 1);
+  --transitions-durations-instant: 0ms;
+  --transitions-durations-short: 100ms;
+  --transitions-durations-medium: 300ms;
+  --transitions-durations-long: 600ms;
+  --borders-heavy: 0.25rem solid hsl(0, 0%, 0%);
+  --borders-wireframe: 0.5rem dashed hsl(24, 75%, 50%);
+  --borders-styles-solid: solid;
+  --borders-styles-dashed: dashed;
+  --shadows-sm: 0 0.25rem 0.75rem hsl(0, 0%, 0%);
+  --shadows-lg: 0 0.5rem 1rem hsl(0, 0%, 0%);
+  --shadows-multi: 0 0.25rem 0.75rem hsl(0, 0%, 0%), 0 0.5rem 1rem hsl(0, 0%, 0%);
+}

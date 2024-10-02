@@ -7,21 +7,16 @@ const createFile = (destination, format, filter) => ({
   ...(filter && { filter }),
 });
 
-// Generate standard output file groups
-const generateFiles = (basePath, type = "") => {
+const generateFiles = (type = "") => {
   const format = type ? `.${type}` : "";
-  console.log(`\nProcessing 123: basepath:${basePath} format:${format}`);
+  console.log(`\nProcessing generateFiles: type:${type}`);
   return [
-    createFile(`module/all/all${format}.module.js`, `javascript/module`),
-
-    createFile(`object/all/all${format}.object.js`, `javascript/object`),
-    createFile(`es6/all/all${format}.es6.js`, `javascript/es6`),
-    createFile(`module/color/colors${format}.module.js`, `javascript/module`, { $type: "color" }),
-    createFile(`module/dimension/dimensions${format}.module.js`, `javascript/module`, { $type: "dimension" }),
-    createFile(`module/typography/typography${format}.module.js`, `javascript/module`, { $type: "typography" }),
-    createFile(`module/typography/fontFamily${format}.module.js`, `javascript/module`, { $type: "fontFamily" }),
+    // web-group-hex (all tokens with hex color)
+    createFile(`es6/all/all.es6.js`, `javascript/module`),
+    // web-group-hex (only color in hex)
+    createFile(`es6/color/colors-hex.js`, `javascript/module`, { $type: "color" }),
   ];
-};
+}
 
 // Register Custom Transforms
 const customTransforms = [
@@ -44,10 +39,9 @@ customTransforms.forEach((transform) => StyleDictionary.registerTransform(transf
 
 // Register Transform Groups dynamically
 const transformGroups = [
-  { name: "web-group", transforms: ["attribute/cti", "name/camel", "custom/size/unit"] },
+  { name: "web-group-hex", transforms: ["attribute/cti", "name/camel", "custom/size/unit", "color/hex"] },
   { name: "web-group-rgb", transforms: ["attribute/cti", "name/camel", "custom/size/unit", "color/rgb"] },
-  { name: "css-group", transforms: ["attribute/cti", "name/kebab", "custom/size/unit", "color/css", "asset/url"] },
-  { name: "css-group-rgb-rem", transforms: ["attribute/cti", "name/kebab", "size/pxToRem", "color/rgb"] },
+  { name: "web-group-hsl", transforms: ["attribute/cti", "name/camel", "custom/size/unit", "color/hsl"] },
 ];
 
 transformGroups.forEach(({ name, transforms }) => {
@@ -55,26 +49,33 @@ transformGroups.forEach(({ name, transforms }) => {
 });
 
 // Helper function to configure platforms
-const getPlatformConfig = (brand, platform, group) => ({
-  transformGroup: group,
-  buildPath: `build/${platform}/${brand}/`,
-  files: generateFiles(`build/${platform}/${brand}/`, platform.includes('css') ? 'css' : ''),
-});
+// brand = brand-1
+// platform = web
+// group = web-group-hex
+// format = javascript/es6
+const getPlatformConfig = (brand, platform, group, buildPathLastFix) => {
+  console.log(`\getPlatformConfig: brand:${brand} platform:${platform} group:${group} buildPathLastFix:${buildPathLastFix}`);
 
-// Generate Style Dictionary Config
+  return {
+    transformGroup: group,
+    buildPath: `build/${platform}/${brand}/${buildPathLastFix}/`,
+    files: generateFiles(),
+  };
+};
+``
+// Generate Style Dictionary Config`
 const getStyleDictionaryConfig = (brand) => ({
   source: [`tokens/brands/${brand}/*.@(json|json5)`],
   platforms: {
-    "custom/web": getPlatformConfig(brand, "web", "web-group"),
-    "custom/web/rgb": getPlatformConfig(brand, "web/rgb", "web-group-rgb"),
-    "custom/css": getPlatformConfig(brand, "css", "css-group"),
-    "custom/css/rem": getPlatformConfig(brand, "css/rem", "css-group-rgb-rem"),
+    "custom/web/hex": getPlatformConfig(brand, "web", "web-group-hex", "js"),
+    "custom/web/rgb": getPlatformConfig(brand, "web", "web-group-rgb", "js"),
+    "custom/web/hsl": getPlatformConfig(brand, "web", "web-group-hsl", "js"),
   },
 });
 
 // Main build function
 const brands = ["brand-1"];
-const platforms = ["custom/web", "custom/web/rgb", "custom/css", "custom/css/rem"];
+const platforms = ["custom/web/hex", "custom/web/rgb", "custom/web/hsl"];
 
 console.log("Build started...");
 
