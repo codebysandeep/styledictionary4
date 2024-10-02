@@ -1,5 +1,5 @@
 {
-  "base-red-100": "#fff5f5",
+  "base-red-100": "rgba(255,0,0,0.3)",
   "base-red-200": "#fed7d7",
   "base-red-300": "#feb2b2",
   "base-red-400": "#fc8181",

@@ -6,12 +6,12 @@ module.exports = {
   "base": {
     "red": {
       "100": {
-        "$value": "rgb(255, 245, 245)",
+        "$value": "rgba(255, 0, 0, 0.3)",
         "filePath": "tokens/brands/brand-1/base.json5",
         "isSource": true,
         "$type": "color",
         "original": {
-          "$value": "#fff5f5",
+          "$value": "rgba(255,0,0,0.3)",
           "$type": "color"
         },
         "name": "baseRed100",

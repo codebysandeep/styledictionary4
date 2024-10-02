@@ -3,7 +3,7 @@
  */
 
 :root {
-  --base-red-100: hsl(0, 100%, 98%);
+  --base-red-100: hsla(0, 100%, 50%, 0.3);
   --base-red-200: hsl(0, 95%, 92%);
   --base-red-300: hsl(0, 97%, 85%);
   --base-red-400: hsl(0, 95%, 75%);

@@ -2,7 +2,7 @@
  * Do not edit directly, this file was auto-generated.
  */
 
-export const baseRed100 = "hsl(0, 100%, 98%)";
+export const baseRed100 = "hsla(0, 100%, 50%, 0.3)";
 export const baseRed200 = "hsl(0, 95%, 92%)";
 export const baseRed300 = "hsl(0, 97%, 85%)";
 export const baseRed400 = "hsl(0, 95%, 75%)";

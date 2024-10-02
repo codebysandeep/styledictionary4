@@ -6,12 +6,12 @@ var _styleDictionary = {
   "base": {
     "red": {
       "100": {
-        "$value": "hsl(0, 100%, 98%)",
+        "$value": "hsla(0, 100%, 50%, 0.3)",
         "filePath": "tokens/brands/brand-1/base.json5",
         "isSource": true,
         "$type": "color",
         "original": {
-          "$value": "#fff5f5",
+          "$value": "rgba(255,0,0,0.3)",
           "$type": "color"
         },
         "name": "baseRed100",

@@ -2,7 +2,7 @@
  * Do not edit directly, this file was auto-generated.
  */
 
-export const baseRed100 = "#fff5f5";
+export const baseRed100 = "rgba(255,0,0,0.3)";
 export const baseRed200 = "#fed7d7";
 export const baseRed300 = "#feb2b2";
 export const baseRed400 = "#fc8181";
