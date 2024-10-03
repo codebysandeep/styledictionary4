@@ -45,7 +45,7 @@ StyleDictionary.registerTransform({
 // CUSTOM TRANSFORM GROUPS - WEB
 StyleDictionary.registerTransformGroup({
   name: "web-group",
-  transforms: ["attribute/cti", "name/camel", "custom/size/unit"],
+  transforms: ["attribute/cti", "name/camel", "custom/size/unit", "color/hex"],
 });
 
 // CUSTOM TRANSFORM GROUPS - WEB / RGB
@@ -102,7 +102,7 @@ StyleDictionary.registerTransformGroup({
     "time/seconds",
     "html/icon",
     "custom/size/unit",
-    "color/css",
+    "color/hex8",
     "asset/url",
     "fontFamily/css",
     "cubicBezier/css",

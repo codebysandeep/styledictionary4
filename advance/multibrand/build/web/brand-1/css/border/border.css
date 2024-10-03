@@ -3,6 +3,6 @@
  */
 
 :root {
-  --borders-heavy: 4px solid #000000;
-  --borders-wireframe: 8px dashed #dd6b20;
+  --borders-heavy: 4px solid #000000ff;
+  --borders-wireframe: 8px dashed #dd6b20ff;
 }

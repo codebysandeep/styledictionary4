@@ -6,7 +6,7 @@ var _styleDictionary = {
   "base": {
     "red": {
       "100": {
-        "$value": "rgba(255,0,0,0.3)",
+        "$value": "#ff0000",
         "filePath": "tokens/brands/brand-1/base.json5",
         "isSource": true,
         "$type": "color",
