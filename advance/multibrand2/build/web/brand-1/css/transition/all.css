@@ -1,0 +1,8 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --transitions-emphasis: 300ms cubic-bezier(0.5, 0, 1, 1) 0ms;
+  --transitions-fade: 600ms cubic-bezier(0, 0, 0.5, 1) 0ms;
+}

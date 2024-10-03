@@ -21,4 +21,3 @@ export const colorsOrange600 = "hsl(24, 75%, 50%)";
 export const colorsOrange700 = "hsl(20, 71%, 44%)";
 export const colorsOrange800 = "hsl(16, 65%, 37%)";
 export const colorsOrange900 = "hsl(14, 61%, 30%)";
-, 30)";

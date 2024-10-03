@@ -1,95 +1,352 @@
 import StyleDictionary from "style-dictionary";
 
-// Helper function to create output file configurations
-const createFile = (destination, format, filter) => ({
-  destination,
-  format,
-  ...(filter && { filter }),
-});
-
-const generateFiles = (type = "") => {
-  const format = type ? `.${type}` : "";
-  console.log(`\nProcessing generateFiles: type:${type}`);
-  return [
-    // web-group-hex (all tokens with hex color)
-    createFile(`es6/all/all.es6.js`, `javascript/es6`),
-    // web-group-hex (only color in hex)
-    createFile(`es6/color/colors-hex.js`, `javascript/es6`, { $type: "color" }),
-    createFile(`es6/color/colors-rgb.js`, `javascript/es6`, { $type: "color" }),
-    createFile(`es6/color/colors-hsl.js`, `javascript/es6`, { $type: "color" }),
-  ];
-}
-
-// Register Custom Transforms
-const customTransforms = [
-  {
-    name: "custom/size/unit",
+// Custom transforms
+const customTransforms = {
+  "custom/size/unit": {
     type: "value",
-    filter: (token) =>
-      ["$fontSize", "$dimension"].includes(token.$type) || ["px", "rem"].includes(token.attributes.unit),
-    transform: (token) => `${token.$value}${token.attributes.unit}`,
+    transitive: true,
+    filter: (token) => token.$type === "dimension" || token.attributes?.unit,
+    transform: (token) => `${token.$value}${token.attributes?.unit || ""}`,
   },
-  {
-    name: "custom/size/unit/rem",
+  "custom/size/unit/rem": {
     type: "value",
-    filter: (token) => ["$fontSize", "$dimension"].includes(token.$type) || token.attributes.unit === "rem",
+    transitive: true,
+    filter: (token) => token.$type === "dimension" || token.attributes?.unit,
     transform: (token) => `${token.$value}rem`,
   },
-];
+};
 
-customTransforms.forEach((transform) => StyleDictionary.registerTransform(transform));
+// Register custom transforms
+Object.entries(customTransforms).forEach(([name, transform]) => {
+  StyleDictionary.registerTransform({ name, ...transform });
+});
 
-// Register Transform Groups dynamically
-const transformGroups = [
-  { name: "web-group-hex", transforms: ["attribute/cti", "name/camel", "custom/size/unit", "color/hex"] },
-  { name: "web-group-rgb", transforms: ["attribute/cti", "name/camel", "custom/size/unit", "color/rgb"] },
-  { name: "web-group-hsl", transforms: ["attribute/cti", "name/camel", "custom/size/unit", "color/hsl"] },
-];
+// Define transform groups
+const transformGroups = {
+  "web-group": ["attribute/cti", "name/camel", "custom/size/unit", "color/hex"],
+  "web-group-rgb": [
+    "attribute/cti",
+    "name/camel",
+    "custom/size/unit",
+    "color/rgb",
+  ],
+  "web-group-hsl": [
+    "attribute/cti",
+    "name/camel",
+    "custom/size/unit",
+    "color/hsl",
+  ],
+  "web-group-rem": ["attribute/cti", "name/camel", "size/pxToRem", "color/hsl"],
+  "web-group-rgb-rem": [
+    "attribute/cti",
+    "name/camel",
+    "size/pxToRem",
+    "color/rgb",
+  ],
+  "web-group-hsl-rem": [
+    "attribute/cti",
+    "name/camel",
+    "size/pxToRem",
+    "color/hsl",
+  ],
+  "css-group": [
+    "attribute/cti",
+    "name/kebab",
+    "time/seconds",
+    "html/icon",
+    "custom/size/unit",
+    "color/hex8",
+    "asset/url",
+    "fontFamily/css",
+    "cubicBezier/css",
+    "strokeStyle/css/shorthand",
+    "border/css/shorthand",
+    "typography/css/shorthand",
+    "transition/css/shorthand",
+    "shadow/css/shorthand",
+  ],
+  "css-group-rgb": [
+    "attribute/cti",
+    "name/kebab",
+    "time/seconds",
+    "html/icon",
+    "custom/size/unit",
+    "color/rgb",
+    "asset/url",
+    "fontFamily/css",
+    "cubicBezier/css",
+    "strokeStyle/css/shorthand",
+    "border/css/shorthand",
+    "typography/css/shorthand",
+    "transition/css/shorthand",
+    "shadow/css/shorthand",
+  ],
+  "css-group-hsl": [
+    "attribute/cti",
+    "name/kebab",
+    "time/seconds",
+    "html/icon",
+    "custom/size/unit",
+    "color/hsl",
+    "asset/url",
+    "fontFamily/css",
+    "cubicBezier/css",
+    "strokeStyle/css/shorthand",
+    "border/css/shorthand",
+    "typography/css/shorthand",
+    "transition/css/shorthand",
+    "shadow/css/shorthand",
+  ],
+  "css-group-rem": [
+    "attribute/cti",
+    "name/kebab",
+    "time/seconds",
+    "html/icon",
+    "size/pxToRem",
+    "color/hex",
+    "asset/url",
+    "fontFamily/css",
+    "cubicBezier/css",
+    "strokeStyle/css/shorthand",
+    "border/css/shorthand",
+    "typography/css/shorthand",
+    "transition/css/shorthand",
+    "shadow/css/shorthand",
+  ],
+  "css-group-rgb-rem": [
+    "attribute/cti",
+    "name/kebab",
+    "time/seconds",
+    "html/icon",
+    "size/pxToRem",
+    "color/rgb",
+    "asset/url",
+    "fontFamily/css",
+    "cubicBezier/css",
+    "strokeStyle/css/shorthand",
+    "border/css/shorthand",
+    "typography/css/shorthand",
+    "transition/css/shorthand",
+    "shadow/css/shorthand",
+  ],
+  "css-group-hsl-rem": [
+    "attribute/cti",
+    "name/kebab",
+    "time/seconds",
+    "html/icon",
+    "size/pxToRem",
+    "color/hsl",
+    "asset/url",
+    "fontFamily/css",
+    "cubicBezier/css",
+    "strokeStyle/css/shorthand",
+    "border/css/shorthand",
+    "typography/css/shorthand",
+    "transition/css/shorthand",
+    "shadow/css/shorthand",
+  ],
+  "scss-group": ["attribute/cti", "name/kebab", "custom/size/unit"],
+  "json-group": ["attribute/cti", "name/kebab", "custom/size/unit"],
+};
 
-transformGroups.forEach(({ name, transforms }) => {
+// Register transform groups
+Object.entries(transformGroups).forEach(([name, transforms]) => {
   StyleDictionary.registerTransformGroup({ name, transforms });
 });
 
-// Helper function to configure platforms
-// brand = brand-1
-// platform = web
-// group = web-group-hex
-// format = javascript/es6
-const getPlatformConfig = (brand, platform, group, buildPathLastFix) => {
-  console.log(`\getPlatformConfig: brand:${brand} platform:${platform} group:${group} buildPathLastFix:${buildPathLastFix}`);
-
-  return {
-    transformGroup: group,
-    buildPath: `build/${platform}/${brand}/${buildPathLastFix}/`,
-    files: generateFiles(),
-  };
+// Define file configurations
+const fileConfigs = {
+  js: [
+    { destination: "module/all/all.module.js", format: "javascript/module" },
+    { destination: "object/all/all.object.js", format: "javascript/object" },
+    { destination: "es6/all/all.es6.js", format: "javascript/es6" },
+  ],
+  css: [{ destination: "all/all.css", format: "css/variables" }],
+  scss: [
+    { destination: "tokens-variables.scss", format: "scss/variables" },
+    { destination: "tokens-map-deep.scss", format: "scss/map-deep" },
+  ],
+  json: [
+    { destination: "tokens.json", format: "json" },
+    { destination: "tokens.flat.json", format: "json/flat" },
+    { destination: "tokens.nested.json", format: "json/nested" },
+  ],
 };
-``
-// Generate Style Dictionary Config`
-const getStyleDictionaryConfig = (brand) => ({
+
+// Helper function to create file configurations
+const createFileConfigs = (baseConfig, types, suffix = "") => {
+  return types.flatMap((type) =>
+    baseConfig.map((config) => ({
+      ...config,
+      destination: config.destination.replace("all", `${type}${suffix}`),
+      filter: { $type: type },
+    }))
+  );
+};
+
+// Define platform configurations
+const platformConfigs = {
+  "custom/web": {
+    transformGroup: "web-group",
+    files: [
+      ...fileConfigs.js,
+      ...createFileConfigs(fileConfigs.js, [
+        "color",
+        "dimension",
+        "typography",
+        "fontFamily",
+        "fontSize",
+        "fontWeight",
+        "transition",
+        "border",
+        "shadow",
+        "number",
+      ]),
+    ],
+  },
+  "custom/web/rgb": {
+    transformGroup: "web-group-rgb",
+    files: [
+      ...fileConfigs.js.map((f) => ({
+        ...f,
+        destination: f.destination.replace("all", "all-rgb"),
+      })),
+      ...createFileConfigs(fileConfigs.js, ["color"], "-rgb"),
+    ],
+  },
+  "custom/web/hsl": {
+    transformGroup: "web-group-hsl",
+    files: [
+      ...fileConfigs.js.map((f) => ({
+        ...f,
+        destination: f.destination.replace("all", "all-hsl"),
+      })),
+      ...createFileConfigs(fileConfigs.js, ["color"], "-hsl"),
+    ],
+  },
+  "custom/web/rem": {
+    transformGroup: "web-group-rem",
+    files: [
+      ...fileConfigs.js.map((f) => ({
+        ...f,
+        destination: f.destination.replace("all", "all-rem"),
+      })),
+      ...createFileConfigs(
+        fileConfigs.js,
+        ["dimension", "typography", "fontSize", "border", "shadow"],
+        "-rem"
+      ),
+    ],
+  },
+  "custom/web/rgb/rem": {
+    transformGroup: "web-group-rgb-rem",
+    files: fileConfigs.js.map((f) => ({
+      ...f,
+      destination: f.destination.replace("all", "all-rgb-rem"),
+    })),
+  },
+  "custom/web/hsl/rem": {
+    transformGroup: "web-group-hsl-rem",
+    files: fileConfigs.js.map((f) => ({
+      ...f,
+      destination: f.destination.replace("all", "all-hsl-rem"),
+    })),
+  },
+  "custom/css": {
+    transformGroup: "css-group",
+    files: [
+      ...fileConfigs.css,
+      ...createFileConfigs(fileConfigs.css, [
+        "color",
+        "dimension",
+        "typography",
+        "fontFamily",
+        "fontSize",
+        "fontWeight",
+        "transition",
+        "border",
+        "shadow",
+        "number",
+      ]),
+    ],
+  },
+  "custom/css/rgb": {
+    transformGroup: "css-group-rgb",
+    files: [
+      ...fileConfigs.css.map((f) => ({
+        ...f,
+        destination: f.destination.replace("all", "all-rgb"),
+      })),
+      ...createFileConfigs(fileConfigs.css, ["color"], "-rgb"),
+    ],
+  },
+  "custom/css/hsl": {
+    transformGroup: "css-group-hsl",
+    files: [
+      ...fileConfigs.css.map((f) => ({
+        ...f,
+        destination: f.destination.replace("all", "all-hsl"),
+      })),
+      ...createFileConfigs(fileConfigs.css, ["color"], "-hsl"),
+    ],
+  },
+  "custom/css/rem": {
+    transformGroup: "css-group-rem",
+    files: [
+      ...fileConfigs.css.map((f) => ({
+        ...f,
+        destination: f.destination.replace("all", "all-rem"),
+      })),
+      ...createFileConfigs(
+        fileConfigs.css,
+        ["dimension", "typography", "fontSize", "border", "shadow"],
+        "-rem"
+      ),
+    ],
+  },
+  "custom/css/rgb/rem": {
+    transformGroup: "css-group-rgb-rem",
+    files: fileConfigs.css.map((f) => ({
+      ...f,
+      destination: f.destination.replace("all", "all-rgb-rem"),
+    })),
+  },
+  "custom/css/hsl/rem": {
+    transformGroup: "css-group-hsl-rem",
+    files: fileConfigs.css.map((f) => ({
+      ...f,
+      destination: f.destination.replace("all", "all-hsl-rem"),
+    })),
+  },
+  "custom/scss": { transformGroup: "scss-group", files: fileConfigs.scss },
+  "custom/json": { transformGroup: "json-group", files: fileConfigs.json },
+};
+
+// Helper function to get Style Dictionary config
+const getStyleDictionaryConfig = (brand, platform) => ({
   source: [`tokens/brands/${brand}/*.@(json|json5)`],
   platforms: {
-    "custom/web/hex": getPlatformConfig(brand, "web", "web-group-hex", "js"),
-    "custom/web/rgb": getPlatformConfig(brand, "web", "web-group-rgb", "js"),
-    "custom/web/hsl": getPlatformConfig(brand, "web", "web-group-hsl", "js"),
+    [platform]: {
+      transformGroup: platformConfigs[platform].transformGroup,
+      buildPath: `build/web/${brand}/${platform.split("/")[1] || "js"}/`,
+      files: platformConfigs[platform].files,
+    },
   },
 });
 
 // Main build function
-const brands = ["brand-1"];
-const platforms = ["custom/web/hex", "custom/web/rgb", "custom/web/hsl"];
+const buildTokens = () => {
+  console.log("Build started...");
 
-console.log("Build started...");
-
-brands.forEach((brand) => {
-  platforms.forEach((platform) => {
-    console.log("\n==============================================");
-    console.log(`\nProcessing: [${platform}] [${brand}]`);
-
-    const sd = new StyleDictionary(getStyleDictionaryConfig(brand, platform));
-    sd.buildPlatform(platform);
+  ["brand-1"].forEach((brand) => {
+    Object.keys(platformConfigs).forEach((platform) => {
+      console.log(`\nProcessing: [${platform}] [${brand}]`);
+      const sd = new StyleDictionary(getStyleDictionaryConfig(brand, platform));
+      sd.buildPlatform(platform);
+    });
   });
-});
 
-console.log("\n==============================================");
-console.log("\nBuild completed!");
+  console.log("\nBuild completed!");
+};
+
+buildTokens();
