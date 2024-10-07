@@ -1,0 +1,161 @@
+// token/base.json
+{
+  "base": {
+    "$type": "color",
+    "red": {
+      "100": {
+        "$value": "#fff5f5"
+      }
+    }
+  }
+}
+
+
+// ====
+
+
+// token/colors.json
+{
+  "colors": {
+      "$type": "color",
+      "black": {
+      "$value": "#000000"
+      },
+      "white": {
+      "$value": "#ffffff"
+      }
+  }
+}
+
+
+// ====
+
+
+// token/dimensionns.json
+{
+  "dimensions": {
+      "$type": "dimension",
+      "0": {
+          "$value": "0",
+          "category": "base",
+          "attributes": {
+              "unit": "px"
+          }
+      }
+  }
+}
+  
+
+// ====
+
+
+// token/object-values.json
+{
+  "text": {
+    "typography": {
+      "$type": "typography",
+      "heading": {
+        "$value": {
+          "fontFamily": "{text.fonts.serif}",
+          "fontWeight": "{text.weights.light}",
+          "fontSize": "{dimensions.1}",
+          "lineHeight": "{text.lineHeights.normal}"
+        }
+      }
+    }
+  },
+  "transitions": {
+    "$type": "transition",
+    "emphasis": {
+      "$value": {
+        "duration": "{transitions.durations.instant}",
+        "delay": "{transitions.durations.instant}",
+        "timingFunction": "{transitions.easingFunctions.accelerate}"
+      }
+    },
+    "easingFunctions": {
+      "$type": "cubicBezier",
+      "accelerate": {
+        "$value": [0.5, 0, 1, 1]
+      }
+    },
+    "durations": {
+      "$type": "duration",
+      "instant": {
+        "$value": "0ms"
+      }
+    }
+  },
+  "borders": {
+    "$type": "border",
+    "heavy": {
+      "$value": {
+        "color": "{colors.black}",
+        "width": "{dimensions.1}",
+        "style": "{borders.styles.solid}"
+      }
+    },
+    "styles": {
+      "$type": "strokeStyle",
+      "solid": {
+        "$value": "solid"
+      },
+    }
+  },
+  "shadows": {
+    "$type": "shadow",
+    "sm": {
+      "$value": {
+        "color": "{colors.black}",
+        "offsetX": "{dimensions.1}",
+        "offsetY": "{dimensions.1}",
+        "blur": "{dimensions.1}"
+      }
+    }
+  }
+}
+
+
+// ====
+
+
+// token/text.json
+{
+  "text": {
+    "fonts": {
+      "$type": "fontFamily",
+      "serif": {
+        "$value": "Times New Roman, serif"
+      }
+    },
+    "sizes": {
+      "$type": "fontSize",
+      "heading": {
+        "$value": "{dimensions.1}"
+      }
+    },
+    "weights": {
+      "$type": "fontWeight",
+      "light": {
+        "$value": "thin"
+      }
+    },
+    "lineHeights": {
+      "$type": "number",
+      "normal": {
+        "$value": 1.2
+      }
+    },
+    "typography": {
+      "$type": "typography",
+      "heading": {
+        "$value": {
+          "fontFamily": "{text.fonts.serif}",
+          "fontWeight": "{text.weights.light}",
+          "fontSize": "{text.sizes.heading}",
+          "lineHeight": "{text.lineHeights.normal}"
+        }
+      }
+    }
+  }
+}

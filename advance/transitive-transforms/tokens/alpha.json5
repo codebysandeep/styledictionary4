@@ -1,4 +1,4 @@
-{
+>{
   // Because these are not like a token object with a 'value' attribute,
   // Style Dictionary won't consider them tokens and therefore won't output them.
   // But, you can still access/reference them in tokens using the same reference
