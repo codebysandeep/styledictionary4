@@ -38,6 +38,9 @@ registerTransforms(customTransforms);
 
 // CUSTOM TRANSFORM GROUPS
 const baseTransforms = [
+  "attribute/cti", "name/kebab", "custom/size/unit", "color/hex"
+];
+const baseJSTransforms = [
   "attribute/cti", "name/camel", "custom/size/unit", "color/hex"
 ];
 
@@ -52,6 +55,18 @@ const baseTransformGroups = [
   { name: "custom-base-size-rem", transforms: [...baseTransforms, "size/pxToRem"] },
 ];
 
+const baseJSTransformGroups = [
+  // Color
+  { name: "custom-base-js-color-hex", transforms: [...baseJSTransforms, "color/hex"] },
+  { name: "custom-base-js-color-rgb", transforms: [...baseJSTransforms, "color/rgb"] },
+  { name: "custom-base-js-color-hsl", transforms: [...baseJSTransforms, "color/hsl"] },
+
+  // Size
+  { name: "custom-base-js-size-px", transforms: [...baseJSTransforms, "size/px"] },
+  { name: "custom-base-js-size-rem", transforms: [...baseJSTransforms, "size/pxToRem"] },
+];
+
+// will use later
 const webTransformGroups = [
   { name: "web-group", transforms: baseTransforms },
   { name: "web-group-rgb", transforms: [...baseTransforms, "color/rgb"] },
@@ -66,6 +81,7 @@ const webTransformGroups = [
 
 ];
 
+// will use later
 const cssTransforms = [
   "attribute/cti", "name/kebab", "time/seconds", "html/icon", "custom/size/unit", 
   "color/hex8", "asset/url", "fontFamily/css", "cubicBezier/css", 
@@ -73,6 +89,7 @@ const cssTransforms = [
   "typography/css/shorthand", "transition/css/shorthand", "shadow/css/shorthand"
 ];
 
+// will use later
 const cssTransformGroups = [
   { name: "css-group", transforms: cssTransforms },
   { name: "css-group-rgb", transforms: [...cssTransforms, "color/rgb"] },
@@ -87,7 +104,7 @@ const otherTransformGroups = [
   { name: "json-group", transforms: ["attribute/cti", "name/kebab", "custom/size/unit"] }
 ];
 
-registerTransformGroups([...baseTransformGroups,...webTransformGroups, ...cssTransformGroups, ...otherTransformGroups]);
+registerTransformGroups([...baseTransformGroups, ...baseJSTransformGroups, ...webTransformGroups, ...cssTransformGroups, ...otherTransformGroups]);
 
 function getStyleDictionaryConfig(brand, platform) {
   const platformToTransformGroup = {
@@ -97,6 +114,12 @@ function getStyleDictionaryConfig(brand, platform) {
     "custom/base/hsl": "custom-base-color-hsl",
     "custom/base/size/px": "custom-base-size-px",
     "custom/base/size/rem": "custom-base-size-rem",
+
+    "custom/base/js/hex": "custom-base-js-color-hex",
+    "custom/base/js/rgb": "custom-base-js-color-rgb", 
+    "custom/base/js/hsl": "custom-base-js-color-hsl",
+    "custom/base/js/size/px": "custom-base-js-size-px",
+    "custom/base/js/size/rem": "custom-base-js-size-rem",
 
 
     // "custom/web": "web-group",
@@ -111,6 +134,11 @@ function getStyleDictionaryConfig(brand, platform) {
   const platformFiles = {
 
     "custom/base/hex": [
+      // css/variables
+      // color
+      { destination: "css/color/color-hex.css", format: "css/variables", filter: { $type: "color" } },
+    ],
+    "custom/base/js/hex": [
       // javascript/es6
       // color
       { destination: "js/es6/color/color-hex.js", format: "javascript/es6", filter: { $type: "color" } },
@@ -123,6 +151,11 @@ function getStyleDictionaryConfig(brand, platform) {
     ],
 
     "custom/base/rgb": [
+      // css/variables
+      // color
+      { destination: "css/color/color-rgb.css", format: "css/variables", filter: { $type: "color" } },
+    ],
+    "custom/base/js/rgb": [
       // javascript/es6
       // color
       { destination: "js/es6/color/color-rgb.js", format: "javascript/es6", filter: { $type: "color" } },
@@ -135,6 +168,11 @@ function getStyleDictionaryConfig(brand, platform) {
     ],
 
     "custom/base/hsl": [
+      // css/variables
+      // color
+      { destination: "css/color/color-hsl.css", format: "css/variables", filter: { $type: "color" } },
+    ],
+    "custom/base/js/hsl": [
       // javascript/es6
       // color
       { destination: "js/es6/color/color-hsl.js", format: "javascript/es6", filter: { $type: "color" } },
@@ -147,6 +185,18 @@ function getStyleDictionaryConfig(brand, platform) {
     ],
 
     "custom/base/size/px": [
+      // css/variables
+      // dimension
+      { destination: "css/dimension/dimension-px.css", format: "css/variables", filter: { $type: "dimension" } },
+      // typography
+      { destination: "css/typography/fontSize-px.css", format: "css/variables", filter: { $type: "fontSize" } },
+      // border
+      { destination: "css/border/border-px.css", format: "css/variables", filter: { $type: "border" } },
+      // shadow
+      { destination: "css/shadow/shadow-px.css", format: "css/variables", filter: { $type: "shadow" } },
+    ],
+
+    "custom/base/js/size/px": [
       // javascript/es6
       // dimension
       { destination: "js/es6/dimension/dimension-px.js", format: "javascript/es6", filter: { $type: "dimension" } },
@@ -179,6 +229,18 @@ function getStyleDictionaryConfig(brand, platform) {
     ],
 
     "custom/base/size/rem": [
+      // css/variables
+      // dimension
+      { destination: "css/dimension/dimension-rem.css", format: "css/variables", filter: { $type: "dimension" } },
+      // typography
+      { destination: "css/typography/fontSize-rem.css", format: "css/variables", filter: { $type: "fontSize" } },
+      // border
+      { destination: "css/border/border-rem.css", format: "css/variables", filter: { $type: "border" } },
+      // shadow
+      { destination: "css/shadow/shadow-rem.css", format: "css/variables", filter: { $type: "shadow" } },
+    ],
+
+    "custom/base/js/size/rem": [
       // javascript/es6
       // dimension
       { destination: "js/es6/dimension/dimension-rem.js", format: "javascript/es6", filter: { $type: "dimension" } },
@@ -210,7 +272,7 @@ function getStyleDictionaryConfig(brand, platform) {
       { destination: "js/module/shadow/shadow-rem.js", format: "javascript/module", filter: { $type: "shadow" } },
     ],
 
-    "custom/base/typography": [
+    "custom/base/js/typography": [
       // javascript/es6
       // typography
       { destination: "js/es6/typography/typography.js", format: "javascript/es6", filter: { $type: "typography" } },
@@ -230,7 +292,7 @@ function getStyleDictionaryConfig(brand, platform) {
       { destination: "js/module/typography/fontWeight.js", format: "javascript/module", filter: { $type: "fontWeight" } },
     ],
 
-    "custom/base/number": [
+    "custom/base/js/number": [
       // javascript/es6
       // number
       { destination: "js/es6/number/number.js", format: "javascript/es6", filter: { $type: "number" } },
@@ -288,13 +350,14 @@ console.log("Build started...");
     "custom/base/hex", 
     "custom/base/rgb", 
     "custom/base/hsl",
-    "custom/base/hex",
-    "custom/base/rgb",
-    "custom/base/hsl",
     "custom/base/size/px",
     "custom/base/size/rem",
-    
-    // "custom/web", "custom/web/rgb", "custom/web/hsl", "custom/web/rem", "custom/web/rgb/rem", "custom/web/hsl/rem"
+
+    "custom/base/js/hex", 
+    "custom/base/js/rgb", 
+    "custom/base/js/hsl",
+    "custom/base/js/size/px",
+    "custom/base/js/size/rem",
   ];
 
   platforms.forEach((platform) => {
