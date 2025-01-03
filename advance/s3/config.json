@@ -1,5 +1,5 @@
 {
-  "source": ["properties/**/*.json"],
+  "source": ["tokens/**/*.json"],
   "platforms": {
     "scss": {
       "transformGroup": "scss",
@@ -88,6 +88,7 @@
     "assets/copy": {
       "transformGroup": "assets",
       "buildPath": "build/",
+      "files": [],
       "actions": ["copy_assets"]
     }
   }
