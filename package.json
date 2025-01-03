@@ -12,6 +12,8 @@
     "colorjs.io": "^0.5.2",
     "rimraf": "^6.0.1",
     "style-dictionary": "^4.3.0",
+    "aws-sdk": "^2.7.21",
+    "fs-extra": "^1.0.0",
     "vite": "^5.4.2"
   }
 }
